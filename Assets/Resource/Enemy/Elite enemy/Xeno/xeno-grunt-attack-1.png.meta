@@ -61,7 +61,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -140,10 +140,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_0
       rect:
         serializedVersion: 2
-        x: 69
+        x: 0
         y: 0
-        width: 77
-        height: 96
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -162,10 +162,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_1
       rect:
         serializedVersion: 2
-        x: 379
+        x: 320
         y: 0
-        width: 87
-        height: 96
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -184,10 +184,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_2
       rect:
         serializedVersion: 2
-        x: 684
+        x: 640
         y: 0
-        width: 102
-        height: 116
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -206,10 +206,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_3
       rect:
         serializedVersion: 2
-        x: 989
+        x: 960
         y: 0
-        width: 112
-        height: 126
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -228,10 +228,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_4
       rect:
         serializedVersion: 2
-        x: 1324
+        x: 1280
         y: 0
-        width: 207
-        height: 76
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -250,10 +250,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_5
       rect:
         serializedVersion: 2
-        x: 1679
+        x: 1600
         y: 0
-        width: 167
-        height: 76
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -272,10 +272,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_6
       rect:
         serializedVersion: 2
-        x: 1999
+        x: 1920
         y: 0
-        width: 117
-        height: 76
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -294,10 +294,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_7
       rect:
         serializedVersion: 2
-        x: 2319
+        x: 2240
         y: 0
-        width: 97
-        height: 76
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -316,10 +316,10 @@ TextureImporter:
       name: xeno-grunt-attack-1_8
       rect:
         serializedVersion: 2
-        x: 2639
+        x: 2560
         y: 0
-        width: 97
-        height: 76
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -338,7 +338,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 091d4739e231e234187f85143b2d7279
     internalID: 0
     vertices: []
     indices: 

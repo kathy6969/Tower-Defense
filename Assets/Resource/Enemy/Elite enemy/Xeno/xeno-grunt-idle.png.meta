@@ -40,7 +40,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -119,10 +119,10 @@ TextureImporter:
       name: xeno-grunt-idle_0
       rect:
         serializedVersion: 2
-        x: 69
+        x: 0
         y: 0
-        width: 72
-        height: 91
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -141,10 +141,10 @@ TextureImporter:
       name: xeno-grunt-idle_1
       rect:
         serializedVersion: 2
-        x: 389
+        x: 320
         y: 0
-        width: 72
-        height: 96
+        width: 320
+        height: 160
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -163,7 +163,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 89915fcbbb63ab34eabbc31f4f520dab
     internalID: 0
     vertices: []
     indices: 
