@@ -199,7 +199,7 @@ TextureImporter:
   maxTextureSize: 2048
   textureSettings:
     serializedVersion: 2
-    filterMode: 1
+    filterMode: 0
     aniso: 1
     mipBias: 0
     wrapU: 1
@@ -213,7 +213,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 16
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -278,9 +278,9 @@ TextureImporter:
       name: mummy_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 191
-        width: 11
+        x: 0
+        y: 208
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -300,9 +300,9 @@ TextureImporter:
       name: mummy_1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 207
-        width: 11
+        x: 16
+        y: 208
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -322,10 +322,10 @@ TextureImporter:
       name: mummy_2
       rect:
         serializedVersion: 2
-        x: 19
-        y: 207
-        width: 11
-        height: 15
+        x: 32
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -344,10 +344,10 @@ TextureImporter:
       name: mummy_3
       rect:
         serializedVersion: 2
-        x: 35
-        y: 207
-        width: 11
-        height: 15
+        x: 48
+        y: 208
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -366,9 +366,9 @@ TextureImporter:
       name: mummy_4
       rect:
         serializedVersion: 2
-        x: 50
-        y: 191
-        width: 11
+        x: 0
+        y: 192
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -388,9 +388,9 @@ TextureImporter:
       name: mummy_5
       rect:
         serializedVersion: 2
-        x: 51
-        y: 207
-        width: 11
+        x: 16
+        y: 192
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -410,10 +410,10 @@ TextureImporter:
       name: mummy_6
       rect:
         serializedVersion: 2
-        x: 2
-        y: 176
-        width: 12
-        height: 15
+        x: 32
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -432,10 +432,10 @@ TextureImporter:
       name: mummy_7
       rect:
         serializedVersion: 2
-        x: 18
-        y: 191
-        width: 11
-        height: 15
+        x: 48
+        y: 192
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -454,10 +454,10 @@ TextureImporter:
       name: mummy_8
       rect:
         serializedVersion: 2
-        x: 34
-        y: 191
-        width: 11
-        height: 15
+        x: 0
+        y: 176
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -476,10 +476,10 @@ TextureImporter:
       name: mummy_9
       rect:
         serializedVersion: 2
-        x: 50
+        x: 16
         y: 176
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -498,10 +498,10 @@ TextureImporter:
       name: mummy_10
       rect:
         serializedVersion: 2
-        x: 18
+        x: 32
         y: 176
-        width: 12
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -520,10 +520,10 @@ TextureImporter:
       name: mummy_11
       rect:
         serializedVersion: 2
-        x: 34
+        x: 48
         y: 176
-        width: 12
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -542,10 +542,10 @@ TextureImporter:
       name: mummy_12
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
         y: 160
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -564,10 +564,10 @@ TextureImporter:
       name: mummy_13
       rect:
         serializedVersion: 2
-        x: 18
+        x: 16
         y: 160
-        width: 12
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -586,10 +586,10 @@ TextureImporter:
       name: mummy_14
       rect:
         serializedVersion: 2
-        x: 34
+        x: 32
         y: 160
-        width: 12
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -608,10 +608,10 @@ TextureImporter:
       name: mummy_15
       rect:
         serializedVersion: 2
-        x: 50
+        x: 48
         y: 160
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -630,10 +630,10 @@ TextureImporter:
       name: mummy_16
       rect:
         serializedVersion: 2
-        x: 2
-        y: 143
-        width: 15
-        height: 15
+        x: 0
+        y: 144
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -653,8 +653,8 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 16
-        y: 127
-        width: 13
+        y: 144
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -674,9 +674,9 @@ TextureImporter:
       name: mummy_18
       rect:
         serializedVersion: 2
-        x: 19
-        y: 143
-        width: 13
+        x: 32
+        y: 144
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -696,9 +696,9 @@ TextureImporter:
       name: mummy_19
       rect:
         serializedVersion: 2
-        x: 32
-        y: 127
-        width: 12
+        x: 48
+        y: 144
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -718,9 +718,9 @@ TextureImporter:
       name: mummy_20
       rect:
         serializedVersion: 2
-        x: 36
-        y: 143
-        width: 12
+        x: 0
+        y: 128
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -740,10 +740,10 @@ TextureImporter:
       name: mummy_21
       rect:
         serializedVersion: 2
-        x: 51
-        y: 143
-        width: 13
-        height: 15
+        x: 16
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -762,10 +762,10 @@ TextureImporter:
       name: mummy_22
       rect:
         serializedVersion: 2
-        x: 0
-        y: 127
-        width: 14
-        height: 15
+        x: 32
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -784,10 +784,10 @@ TextureImporter:
       name: mummy_23
       rect:
         serializedVersion: 2
-        x: 34
-        y: 112
-        width: 11
-        height: 15
+        x: 48
+        y: 128
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -806,10 +806,10 @@ TextureImporter:
       name: mummy_24
       rect:
         serializedVersion: 2
-        x: 48
-        y: 127
-        width: 13
-        height: 15
+        x: 0
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -828,10 +828,10 @@ TextureImporter:
       name: mummy_25
       rect:
         serializedVersion: 2
-        x: 2
-        y: 111
-        width: 11
-        height: 14
+        x: 16
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -850,10 +850,10 @@ TextureImporter:
       name: mummy_26
       rect:
         serializedVersion: 2
-        x: 2
-        y: 95
-        width: 12
-        height: 17
+        x: 32
+        y: 112
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -872,10 +872,10 @@ TextureImporter:
       name: mummy_27
       rect:
         serializedVersion: 2
-        x: 19
+        x: 48
         y: 112
-        width: 10
-        height: 14
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -894,10 +894,10 @@ TextureImporter:
       name: mummy_28
       rect:
         serializedVersion: 2
-        x: 50
-        y: 112
-        width: 11
-        height: 14
+        x: 0
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -916,10 +916,10 @@ TextureImporter:
       name: mummy_29
       rect:
         serializedVersion: 2
-        x: 2
-        y: 79
-        width: 12
-        height: 17
+        x: 16
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -938,9 +938,9 @@ TextureImporter:
       name: mummy_30
       rect:
         serializedVersion: 2
-        x: 18
-        y: 95
-        width: 12
+        x: 32
+        y: 96
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -960,10 +960,10 @@ TextureImporter:
       name: mummy_31
       rect:
         serializedVersion: 2
-        x: 18
-        y: 79
-        width: 13
-        height: 17
+        x: 48
+        y: 96
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -982,10 +982,10 @@ TextureImporter:
       name: mummy_32
       rect:
         serializedVersion: 2
-        x: 34
-        y: 96
-        width: 12
-        height: 15
+        x: 0
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1004,9 +1004,9 @@ TextureImporter:
       name: mummy_33
       rect:
         serializedVersion: 2
-        x: 50
-        y: 95
-        width: 12
+        x: 16
+        y: 80
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1026,10 +1026,10 @@ TextureImporter:
       name: mummy_34
       rect:
         serializedVersion: 2
-        x: 2
-        y: 63
-        width: 12
-        height: 17
+        x: 32
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1048,10 +1048,10 @@ TextureImporter:
       name: mummy_35
       rect:
         serializedVersion: 2
-        x: 17
-        y: 63
-        width: 13
-        height: 17
+        x: 48
+        y: 80
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1070,10 +1070,10 @@ TextureImporter:
       name: mummy_36
       rect:
         serializedVersion: 2
-        x: 35
-        y: 79
-        width: 14
-        height: 15
+        x: 0
+        y: 64
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1092,9 +1092,9 @@ TextureImporter:
       name: mummy_37
       rect:
         serializedVersion: 2
-        x: 48
-        y: 63
-        width: 13
+        x: 16
+        y: 64
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1114,9 +1114,9 @@ TextureImporter:
       name: mummy_38
       rect:
         serializedVersion: 2
-        x: 51
-        y: 79
-        width: 13
+        x: 32
+        y: 64
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1136,9 +1136,9 @@ TextureImporter:
       name: mummy_39
       rect:
         serializedVersion: 2
-        x: 1
-        y: 48
-        width: 14
+        x: 48
+        y: 64
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1158,9 +1158,9 @@ TextureImporter:
       name: mummy_40
       rect:
         serializedVersion: 2
-        x: 17
+        x: 0
         y: 48
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
@@ -1180,10 +1180,10 @@ TextureImporter:
       name: mummy_41
       rect:
         serializedVersion: 2
-        x: 31
-        y: 63
-        width: 14
-        height: 15
+        x: 16
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1202,10 +1202,10 @@ TextureImporter:
       name: mummy_42
       rect:
         serializedVersion: 2
-        x: 1
-        y: 32
-        width: 14
-        height: 15
+        x: 32
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1224,10 +1224,10 @@ TextureImporter:
       name: mummy_43
       rect:
         serializedVersion: 2
-        x: 17
-        y: 32
-        width: 14
-        height: 15
+        x: 48
+        y: 48
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1246,10 +1246,10 @@ TextureImporter:
       name: mummy_44
       rect:
         serializedVersion: 2
-        x: 34
+        x: 0
         y: 32
-        width: 12
-        height: 30
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1268,10 +1268,10 @@ TextureImporter:
       name: mummy_45
       rect:
         serializedVersion: 2
-        x: 50
-        y: 47
-        width: 11
-        height: 15
+        x: 16
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1290,10 +1290,10 @@ TextureImporter:
       name: mummy_46
       rect:
         serializedVersion: 2
-        x: 50
+        x: 32
         y: 32
-        width: 12
-        height: 15
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1312,10 +1312,10 @@ TextureImporter:
       name: mummy_47
       rect:
         serializedVersion: 2
-        x: 0
-        y: 16
-        width: 15
-        height: 15
+        x: 48
+        y: 32
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1334,10 +1334,10 @@ TextureImporter:
       name: mummy_48
       rect:
         serializedVersion: 2
-        x: 15
-        y: 17
-        width: 17
-        height: 13
+        x: 0
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1356,10 +1356,10 @@ TextureImporter:
       name: mummy_49
       rect:
         serializedVersion: 2
-        x: 32
-        y: 19
+        x: 16
+        y: 16
         width: 16
-        height: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1378,10 +1378,10 @@ TextureImporter:
       name: mummy_50
       rect:
         serializedVersion: 2
-        x: 47
-        y: 15
-        width: 17
-        height: 12
+        x: 32
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1400,10 +1400,10 @@ TextureImporter:
       name: mummy_51
       rect:
         serializedVersion: 2
-        x: 1
-        y: 0
-        width: 15
-        height: 15
+        x: 48
+        y: 16
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1422,10 +1422,10 @@ TextureImporter:
       name: mummy_52
       rect:
         serializedVersion: 2
-        x: 16
-        y: 1
-        width: 17
-        height: 13
+        x: 0
+        y: 0
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1444,10 +1444,10 @@ TextureImporter:
       name: mummy_53
       rect:
         serializedVersion: 2
-        x: 32
-        y: 3
+        x: 16
+        y: 0
         width: 16
-        height: 12
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1466,10 +1466,10 @@ TextureImporter:
       name: mummy_54
       rect:
         serializedVersion: 2
-        x: 48
+        x: 32
         y: 0
         width: 16
-        height: 11
+        height: 16
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -1484,11 +1484,33 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: mummy_55
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4886198664f79ad48bbf51e5fc77b04d
+      internalID: -766539899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 
+    spriteID: 2a163343d98f75a4496906a77f849d8c
     internalID: 0
     vertices: []
     indices: 
@@ -1549,6 +1571,7 @@ TextureImporter:
       mummy_52: -850671243447802719
       mummy_53: -3993479262272344055
       mummy_54: -2754306559103111055
+      mummy_55: -766539899
       mummy_6: 5407316820765687176
       mummy_7: 3936361091482908842
       mummy_8: -7830170739790180191
