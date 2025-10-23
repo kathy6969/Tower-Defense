@@ -657,6 +657,17 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &2091552674 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2517054396539092901, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+  m_PrefabInstance: {fileID: 6600448326743818622}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9b98a0c6090a954469fd1545595c19d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &391605481708853074
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1453,6 +1464,10 @@ PrefabInstance:
       propertyPath: attackAnimDuration
       value: 0.91
       objectReference: {fileID: 0}
+    - target: {fileID: 740476138863939102, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: EnemyMoveState
+      value: 
+      objectReference: {fileID: 2091552674}
     - target: {fileID: 856493661537217884, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1471,11 +1486,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1791323729012000228, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -14.87
+      value: 20.72
       objectReference: {fileID: 0}
     - target: {fileID: 1791323729012000228, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 6.14
+      value: 5.04
       objectReference: {fileID: 0}
     - target: {fileID: 1791323729012000228, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_LocalPosition.z

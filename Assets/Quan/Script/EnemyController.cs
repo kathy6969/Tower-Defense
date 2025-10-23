@@ -15,7 +15,7 @@ public class EnemyController : MonoBehaviour
 
     [Header("States")]
     public EnemyIdleState idleState;
-    public EnemyMoveState moveState;
+    public EnemyMoveState EnemyMoveState;
     public EnemyAttackState attackState;
 
     [HideInInspector] public Transform targetPlayer;

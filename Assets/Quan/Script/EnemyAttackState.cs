@@ -3,8 +3,10 @@ using System.Collections;
 
 public class EnemyAttackState : EnemyState
 {
-    [Header("Cấu hình tấn công")]
-    public float attackCooldown = 1.5f;     // Thời gian hồi chiêu
+    [Header("Cấu hình thời gian")]
+    public float attackCooldown = 1.5f;     // Thời gian hồi chiêu (chờ giữa các đòn)
+    [Tooltip("Tổng thời gian của animation tấn công")]
+    public float attackAnimationDuration = 1.0f; // 👈 BIẾN MỚI
     public float enableHitboxTime = 0.45f;  // Thời điểm bật hitbox
     public float disableHitboxTime = 0.54f; // Thời điểm tắt hitbox
 
@@ -18,41 +20,47 @@ public class EnemyAttackState : EnemyState
     {
         base.OnEnter(enemy);
 
-        // Reset timer để bắt đầu tính hồi chiêu
         if (attackTimer <= 0)
             attackTimer = 0f;
 
         isAttacking = false;
 
-        // Tắt hitbox an toàn
         if (attackBox != null)
             attackBox.SetActive(false);
+    }
+
+    // HÀM MỚI: Để các state khác kiểm tra
+    public bool IsAttackReady()
+    {
+        // Sẵn sàng khi hết hồi chiêu VÀ không đang trong một đòn đánh dở dang
+        return attackTimer <= 0 && !isAttacking;
     }
 
     public override void OnUpdate()
     {
         attackTimer -= Time.deltaTime;
 
-        // Nếu player rời khỏi vùng tấn công → quay lại Move
+        // 1. Ưu tiên 1: Nếu player rời khỏi vùng tấn công → quay lại Đuổi theo
         if (!enemy.PlayerInAttackRange())
         {
-            enemy.ChangeState(enemy.moveState);
+            enemy.ChangeState(enemy.EnemyMoveState); // 👈 Đã sửa tên
             return;
         }
 
-        // Nếu đang hồi chiêu mà chưa sẵn sàng tấn công → đứng idle
-        if (attackTimer > 0 && !isAttacking)
+        // 2. Nếu đang trong animation tấn công (isAttacking == true)
+        if (isAttacking)
         {
-            enemy.ChangeState(enemy.idleState);
             return;
         }
 
-        // Nếu hết hồi chiêu và chưa tấn công
-        if (attackTimer <= 0 && !isAttacking)
+        // 3. Nếu HẾT hồi chiêu (và không đang tấn công)
+        if (IsAttackReady())
         {
             attackTimer = attackCooldown;
             enemy.StartCoroutine(AttackRoutine());
         }
+
+        // 4. Nếu CÒN hồi chiêu -> CỨ ĐỨNG YÊN.
     }
 
     private IEnumerator AttackRoutine()
@@ -63,30 +71,35 @@ public class EnemyAttackState : EnemyState
         if (animator != null && !string.IsNullOrEmpty(animationName))
             animator.Play(animationName);
 
-        // Bật hitbox tại thời điểm xác định
+        // Bật hitbox
         yield return new WaitForSeconds(enableHitboxTime);
         if (attackBox != null)
             attackBox.SetActive(true);
 
         // Tắt hitbox
-        yield return new WaitForSeconds(disableHitboxTime - enableHitboxTime);
+        float hitboxDuration = disableHitboxTime - enableHitboxTime;
+        if (hitboxDuration > 0)
+            yield return new WaitForSeconds(hitboxDuration);
+
         if (attackBox != null)
             attackBox.SetActive(false);
 
-        // Thêm thời gian đợi anim kết thúc
-        yield return new WaitForSeconds(0.2f);
+        // Chờ cho phần còn lại của animation chạy xong
+        float remainingAnimTime = attackAnimationDuration - disableHitboxTime;
+        if (remainingAnimTime > 0)
+            yield return new WaitForSeconds(remainingAnimTime);
 
         isAttacking = false;
+
+        // Tấn công xong, chuyển về IDLE để chờ cooldown
+        enemy.ChangeState(enemy.idleState);
     }
 
     public override void OnExit()
     {
         base.OnExit();
-
-        // Khi thoát state, đảm bảo hitbox tắt
         if (attackBox != null)
             attackBox.SetActive(false);
-
         isAttacking = false;
     }
 }
