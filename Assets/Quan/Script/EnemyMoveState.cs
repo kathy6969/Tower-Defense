@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-// Tên file phải là: EnemyChaseState.cs
+// Tên file phải là: EnemyMoveState.cs
 public class EnemyMoveState : EnemyState
 {
     // Đây là biến từ code 'move' của bạn
@@ -17,13 +17,17 @@ public class EnemyMoveState : EnemyState
             return;
         }
 
-        // 2. Kiểm tra chuyển State (Đây là LOGIC MỚI đã sửa)
+        // 2. Kiểm tra chuyển State
 
         // Nếu vào tầm tấn công
         if (enemy.PlayerInAttackRange())
         {
             // Logic lựa chọn MỚI (sửa lỗi nhấp nháy)
-            if (enemy.attackState.IsAttackReady())
+
+            // ⚠️ SỬA ĐỔI QUAN TRỌNG:
+            // Gọi hàm IsAttackReady() từ 'enemy' (Controller)
+            // thay vì từ 'enemy.attackState'
+            if (enemy.IsAttackReady()) // 👈 ĐÃ SỬA DÒNG NÀY
             {
                 enemy.ChangeState(enemy.attackState); // Sẵn sàng -> Tấn công
             }
@@ -43,10 +47,10 @@ public class EnemyMoveState : EnemyState
         }
 
         // 3. Logic Di Chuyển (Đây là code 'move' CŨ của bạn)
-        // Nếu không chuyển state, thì tiếp tục di chuyển
         Vector2 dir = (enemy.targetPlayer.position - enemy.centerPoint.position).normalized;
         enemy.transform.position += (Vector3)(dir * moveSpeed * Time.deltaTime);
 
-        // (Bạn có thể thêm code lật sprite ở đây nếu cần)
+        // 4. GỌI HÀM LẬT SPRITE (Đúng rồi)
+        enemy.CheckAndFlip(dir);
     }
 }

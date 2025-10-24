@@ -7,8 +7,11 @@ public class EnemyIdleState : EnemyState
         base.OnUpdate();
 
         // Ưu tiên 1: Kiểm tra xem có thể tấn công không?
-        // Player CÒN trong tầm VÀ đòn đánh ĐÃ sẵn sàng?
-        if (enemy.PlayerInAttackRange() && enemy.attackState.IsAttackReady())
+
+        // ⚠️ SỬA ĐỔI QUAN TRỌNG:
+        // Gọi hàm IsAttackReady() từ 'enemy' (Controller)
+        // thay vì từ 'enemy.attackState'
+        if (enemy.PlayerInAttackRange() && enemy.IsAttackReady()) // 👈 ĐÃ SỬA DÒNG NÀY
         {
             enemy.ChangeState(enemy.attackState);
             return;
@@ -18,7 +21,7 @@ public class EnemyIdleState : EnemyState
         if (!enemy.PlayerInAttackRange() && enemy.PlayerInDetectRange())
         {
             enemy.GetPlayerTarget();
-            enemy.ChangeState(enemy.EnemyMoveState); // 👈 Đã sửa tên
+            enemy.ChangeState(enemy.moveState);
             return;
         }
 
