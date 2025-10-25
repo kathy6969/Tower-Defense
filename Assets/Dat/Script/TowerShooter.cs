@@ -1,49 +1,52 @@
 using UnityEngine;
+using System.Collections.Generic;
 
 public class TowerShooter : MonoBehaviour
 {
-    [SerializeField] private float range = 5f; // Phạm vi tấn công
-    [SerializeField] private float fireRate = 1f; // Tốc độ bắn (giây)
-    [SerializeField] private GameObject bulletPrefab; // Prefab đạn
-    [SerializeField] private Transform firePoint; // Điểm bắn đạn
+    [Header("Attack Settings")]
+    public float range = 5f;                   // Phạm vi tấn công
+    public float fireRate = 1f;                // Tốc độ bắn (số phát mỗi giây)
+    public int maxTargets = 3;                 // Số lượng kẻ thù tối đa có thể tấn công cùng lúc
+
+    [Header("References")]
+    public GameObject bulletPrefab;
+    public Transform firePoint;
 
     private float fireCountdown = 0f;
-    private Transform target;
-    
+    private List<Transform> currentTargets = new List<Transform>();
+
     void Start()
     {
-        InvokeRepeating("UpdateTarget", 0f, 0.5f); // Cập nhật target mỗi 0.5s
+        InvokeRepeating(nameof(UpdateTargets), 0f, 0.5f);
     }
 
-    void UpdateTarget()
+    void UpdateTargets()
     {
         GameObject[] enemies = GameObject.FindGameObjectsWithTag("Enemy");
-        float shortestDistance = Mathf.Infinity;
-        GameObject nearestEnemy = null;
+        List<(float distance, Transform enemy)> validEnemies = new List<(float, Transform)>();
 
+        // Lọc những kẻ địch trong tầm
         foreach (GameObject enemy in enemies)
         {
-            float distanceToEnemy = Vector3.Distance(transform.position, enemy.transform.position);
-            if (distanceToEnemy < shortestDistance)
-            {
-                shortestDistance = distanceToEnemy;
-                nearestEnemy = enemy;
-            }
+            float distance = Vector3.Distance(transform.position, enemy.transform.position);
+            if (distance <= range)
+                validEnemies.Add((distance, enemy.transform));
         }
 
-        if (nearestEnemy != null && shortestDistance <= range)
+        // Sắp xếp theo khoảng cách tăng dần
+        validEnemies.Sort((a, b) => a.distance.CompareTo(b.distance));
+
+        // Giới hạn số lượng mục tiêu
+        currentTargets.Clear();
+        for (int i = 0; i < Mathf.Min(maxTargets, validEnemies.Count); i++)
         {
-            target = nearestEnemy.transform;
-        }
-        else
-        {
-            target = null;
+            currentTargets.Add(validEnemies[i].enemy);
         }
     }
 
     void Update()
     {
-        if (target == null)
+        if (currentTargets.Count == 0)
             return;
 
         if (fireCountdown <= 0f)
@@ -57,18 +60,21 @@ public class TowerShooter : MonoBehaviour
 
     void Shoot()
     {
-        GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
-        Bullet bullet = bulletGO.GetComponent<Bullet>();
-
-        if (bullet != null)
+        foreach (Transform target in currentTargets)
         {
-            bullet.Seek(target);
+            if (target == null) continue;
+
+            GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
+            Bullet bullet = bulletGO.GetComponent<Bullet>();
+            if (bullet != null)
+            {
+                bullet.Launch(target);
+            }
         }
     }
 
     void OnDrawGizmosSelected()
     {
-        // Vẽ phạm vi tấn công trong Scene view
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, range);
     }
