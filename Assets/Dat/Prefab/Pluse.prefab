@@ -120,10 +120,10 @@ GameObject:
   m_Component:
   - component: {fileID: 3179090969058324049}
   - component: {fileID: 7626698751766978723}
-  - component: {fileID: 2676013672731434095}
+  - component: {fileID: 1896419336207497342}
   - component: {fileID: 218969242848661816}
   - component: {fileID: 3832836983253931854}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Pluse
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -182,7 +182,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: 0, y: 0}
   m_Radius: 0.38
---- !u!50 &2676013672731434095
+--- !u!50 &1896419336207497342
 Rigidbody2D:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -235,8 +235,8 @@ MonoBehaviour:
       inWeight: 0
       outWeight: 0
     - serializedVersion: 3
-      time: 0.49999997
-      value: 0.49953818
+      time: 0.4999911
+      value: 0.49744785
       inSlope: 0.0019523492
       outSlope: 0.0019523492
       tangentMode: 0
@@ -302,7 +302,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Time: 0.15
-  m_PreviewTimeScale: 0
+  m_PreviewTimeScale: 1
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
