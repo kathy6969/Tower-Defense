@@ -60,7 +60,7 @@ public class Bullet : MonoBehaviour
 
     void HitTarget()
     {
-        Debug.Log("Bullet hit the target!");
+        //Debug.Log("Bullet hit the target!");
         // Có thể thêm hiệu ứng va chạm ở đây
         Destroy(gameObject);
     }

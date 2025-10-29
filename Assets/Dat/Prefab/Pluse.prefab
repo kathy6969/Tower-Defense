@@ -122,6 +122,7 @@ GameObject:
   - component: {fileID: 7626698751766978723}
   - component: {fileID: 1896419336207497342}
   - component: {fileID: 218969242848661816}
+  - component: {fileID: 1460395429171807027}
   - component: {fileID: 3832836983253931854}
   m_Layer: 6
   m_Name: Pluse
@@ -256,6 +257,19 @@ MonoBehaviour:
     m_PostInfinity: 2
     m_RotationOrder: 4
   maxHeight: 2
+--- !u!114 &1460395429171807027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5087247711384696631}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bcddc9fd72d7c644b2ee7f8b0b01c54, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damageAmount: 10
 --- !u!96 &3832836983253931854
 TrailRenderer:
   serializedVersion: 3
