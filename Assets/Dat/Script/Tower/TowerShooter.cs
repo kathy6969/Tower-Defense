@@ -4,9 +4,9 @@ using System.Collections.Generic;
 public class TowerShooter : MonoBehaviour
 {
     [Header("Attack Settings")]
-    public float range = 5f;                   // Phạm vi tấn công
-    public float fireRate = 1f;                // Tốc độ bắn (số phát mỗi giây)
-    public int maxTargets = 3;                 // Số lượng kẻ thù tối đa có thể tấn công cùng lúc
+    public float range = 5f;// Phạm vi tấn công
+    public float fireRate = 1f;// Tốc độ bắn (số phát mỗi giây)
+    public int maxTargets = 3;// Số lượng kẻ thù tối đa có thể tấn công cùng lúc
 
     [Header("References")]
     public GameObject bulletPrefab;

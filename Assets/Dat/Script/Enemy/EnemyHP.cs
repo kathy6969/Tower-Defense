@@ -11,9 +11,12 @@ public class EnemyHP : MonoBehaviour
     public float InvincibilityTime = 0.17f; // Invincibility time in seconds after taking damage
     public Image healthBar; // Reference to the health bar UI element
     private bool isInvincible = false; // Invincibility state
+
+    private ChildActivator childActivator;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        childActivator = GetComponentInParent<ChildActivator>();
         maxHP = BaseHP;
         currentHP = maxHP;
         UpdateHealthBar();
@@ -29,7 +32,7 @@ public class EnemyHP : MonoBehaviour
         if (isInvincible) return;
 
         currentHP -= damage;
-        Debug.Log("Enemy took " + damage + " damage. Current HP: " + currentHP);
+        //Debug.Log("Enemy took " + damage + " damage. Current HP: " + currentHP);
         UpdateHealthBar();
 
         if (currentHP <= 0)
@@ -56,7 +59,11 @@ public class EnemyHP : MonoBehaviour
     }
     public void Die()
     {
-        Debug.Log("Enemy died");
+        //Debug.Log("Enemy died");
         //Destroy(gameObject);
+        if (childActivator != null)
+        {
+            childActivator.EnableRandomChildren(1, 2);
+        }
     }
 }
