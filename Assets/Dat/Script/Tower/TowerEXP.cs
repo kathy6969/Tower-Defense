@@ -12,6 +12,7 @@ public class TowerEXP : MonoBehaviour
     public int expRequiredForNext;  // lưu giá trị exp cần cho cấp tiếp theo
     public Image expBarFill; // Tham chiếu đến Image fill của thanh EXP
     public TextMeshProUGUI levelText; // Tham chiếu đến Text hiển thị cấp độ
+    public CardUpgradeUI cardUpgradeUI; // Tham chiếu đến CardUpgradeUI
     private void Start()
     {
         expRequiredForNext = GetRequiredExpForNextLevel();
@@ -46,6 +47,7 @@ public class TowerEXP : MonoBehaviour
     {
         Debug.Log($"Tower leveled up! Current level: {currentLevel}");
         // Gợi ý: thêm hiệu ứng particle, tăng sát thương, tầm bắn...
+        cardUpgradeUI.ShowCardUpgradePanel();
     }
 
     public int GetRequiredExpForNextLevel()
