@@ -15,3 +15,10 @@ MonoBehaviour:
   UpgradeName: "M\u1ED9c tinh linh"
   UpgradeDescription: "M\u1ED9c tinh linh"
   UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
+  upgradeCardType: 2
+  targetStat: 0
+  statValue: 0
+  isMultiplier: 0
+  extraBulletPrefab: {fileID: 0}
+  MinionPrefab: {fileID: 0}
+  replaceMainBullet: 0

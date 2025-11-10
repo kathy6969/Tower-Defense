@@ -1,31 +1,34 @@
 fileFormatVersion: 2
-guid: 82f9a53eeec46af458a4a420971a5375
+guid: b62c3ba543a4da64eaa7c0be2fe82454
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -8496419234733875833
-    second: Fairy 2_0
+      213: 7061351703277573527
+    second: Fairy5_0
   - first:
-      213: 5457306760673149597
-    second: Fairy 2_1
+      213: -7120391497229677062
+    second: Fairy5_1
   - first:
-      213: -7660566841553519466
-    second: Fairy 2_2
+      213: 4738835203372788070
+    second: Fairy5_2
   - first:
-      213: 4758116864558948499
-    second: Fairy 2_3
+      213: -9052351279574735779
+    second: Fairy5_3
   - first:
-      213: 171587810793341449
-    second: Fairy 2_4
+      213: 3381621360402719751
+    second: Fairy5_4
   - first:
-      213: 2234110510543315103
-    second: Fairy 2_5
+      213: 8441540575014592431
+    second: Fairy5_5
   - first:
-      213: 1548372707553072358
-    second: Fairy 2_6
+      213: 3679507041607491301
+    second: Fairy5_6
   - first:
-      213: 4188396730080925210
-    second: Fairy 2_7
+      213: -3049861014757852302
+    second: Fairy5_7
+  - first:
+      213: 7963791842672065850
+    second: Fairy5_8
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -134,7 +137,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Fairy 2_0
+      name: Fairy5_0
       rect:
         serializedVersion: 2
         x: 0
@@ -149,14 +152,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 78d14e2d8b7a61a80800000000000000
-      internalID: -8496419234733875833
+      spriteID: 79595f326f5fef160800000000000000
+      internalID: 7061351703277573527
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_1
+      name: Fairy5_1
       rect:
         serializedVersion: 2
         x: 32
@@ -171,14 +174,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: d92c244b59f3cbb40800000000000000
-      internalID: 5457306760673149597
+      spriteID: afdc9e1a8a94f2d90800000000000000
+      internalID: -7120391497229677062
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_2
+      name: Fairy5_2
       rect:
         serializedVersion: 2
         x: 64
@@ -193,14 +196,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 69cf0178b0330b590800000000000000
-      internalID: -7660566841553519466
+      spriteID: 669a6229289b3c140800000000000000
+      internalID: 4738835203372788070
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_3
+      name: Fairy5_3
       rect:
         serializedVersion: 2
         x: 96
@@ -215,14 +218,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 390e4d7241a380240800000000000000
-      internalID: 4758116864558948499
+      spriteID: d5425eef8769f5280800000000000000
+      internalID: -9052351279574735779
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_4
+      name: Fairy5_4
       rect:
         serializedVersion: 2
         x: 128
@@ -237,14 +240,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 902cf1e643a916200800000000000000
-      internalID: 171587810793341449
+      spriteID: 7046dafe5beedee20800000000000000
+      internalID: 3381621360402719751
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_5
+      name: Fairy5_5
       rect:
         serializedVersion: 2
         x: 160
@@ -259,14 +262,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: f90a6e92ca7210f10800000000000000
-      internalID: 2234110510543315103
+      spriteID: faf9ac28d60662570800000000000000
+      internalID: 8441540575014592431
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_6
+      name: Fairy5_6
       rect:
         serializedVersion: 2
         x: 192
@@ -281,14 +284,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: 6e45c9d16ccec7510800000000000000
-      internalID: 1548372707553072358
+      spriteID: 5ee1093d82c301330800000000000000
+      internalID: 3679507041607491301
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Fairy 2_7
+      name: Fairy5_7
       rect:
         serializedVersion: 2
         x: 224
@@ -303,8 +306,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: a1691ea82ac202a30800000000000000
-      internalID: 4188396730080925210
+      spriteID: 27bbb01e097bca5d0800000000000000
+      internalID: -3049861014757852302
       vertices: []
       indices: 
       edges: []
@@ -313,7 +316,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 16104ae2874f9514489ba28e06298338
+    spriteID: eba2a6c2aa363344cb03be8256256023
     internalID: 0
     vertices: []
     indices: 
@@ -323,14 +326,14 @@ TextureImporter:
     spriteCustomMetadata:
       entries: []
     nameFileIdTable:
-      Fairy 2_0: -8496419234733875833
-      Fairy 2_1: 5457306760673149597
-      Fairy 2_2: -7660566841553519466
-      Fairy 2_3: 4758116864558948499
-      Fairy 2_4: 171587810793341449
-      Fairy 2_5: 2234110510543315103
-      Fairy 2_6: 1548372707553072358
-      Fairy 2_7: 4188396730080925210
+      Fairy5_0: 7061351703277573527
+      Fairy5_1: -7120391497229677062
+      Fairy5_2: 4738835203372788070
+      Fairy5_3: -9052351279574735779
+      Fairy5_4: 3381621360402719751
+      Fairy5_5: 8441540575014592431
+      Fairy5_6: 3679507041607491301
+      Fairy5_7: -3049861014757852302
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

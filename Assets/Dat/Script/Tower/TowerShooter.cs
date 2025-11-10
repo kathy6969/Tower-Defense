@@ -11,9 +11,11 @@ public class TowerShooter : MonoBehaviour
     [Header("References")]
     public GameObject bulletPrefab;
     public Transform firePoint;
+    public Transform MinionSlot; // Vị trí để triệu hồi tháp phụ
 
     private float fireCountdown = 0f;
     private List<Transform> currentTargets = new List<Transform>();
+    private List<GameObject> extraWeapons = new List<GameObject>();
 
     void Start()
     {
@@ -64,13 +66,27 @@ public class TowerShooter : MonoBehaviour
         {
             if (target == null) continue;
 
+            // Bắn viên đạn chính
             GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Bullet bullet = bulletGO.GetComponent<Bullet>();
             if (bullet != null)
-            {
                 bullet.Launch(target);
+
+            // Bắn thêm vũ khí phụ (nếu có)
+            foreach (var extra in extraWeapons)
+            {
+                GameObject bulletExtra = Instantiate(extra, firePoint.position, firePoint.rotation);
+                Bullet bulletExtraComp = bulletExtra.GetComponent<Bullet>();
+                if (bulletExtraComp != null)
+                    bulletExtraComp.Launch(target);
             }
         }
+    }
+
+    public void AddExtraWeapon(GameObject newBulletPrefab)
+    {
+        if (!extraWeapons.Contains(newBulletPrefab))
+            extraWeapons.Add(newBulletPrefab);
     }
 
     void OnDrawGizmosSelected()

@@ -13,5 +13,12 @@ MonoBehaviour:
   m_Name: FirerateUpgrade
   m_EditorClassIdentifier: 
   UpgradeName: "\u0110\xE1nh nhanh th\u1EAFng nhanh"
-  UpgradeDescription: "T\u0103ng t\u1ED1ng \u0111\u1ED9 t\u1EA5n c\xF4ng"
+  UpgradeDescription: "T\u0103ng t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng"
   UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
+  upgradeCardType: 0
+  targetStat: 1
+  statValue: 1
+  isMultiplier: 0
+  extraBulletPrefab: {fileID: 0}
+  MinionPrefab: {fileID: 0}
+  replaceMainBullet: 0

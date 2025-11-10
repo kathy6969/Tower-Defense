@@ -18,6 +18,9 @@ public class CardUpgradeUI : MonoBehaviour
     private float screenHeight = 1080f;
     public Ease easeType = Ease.OutSine;
 
+    [Header("Else Settings")]
+    public TowerShooter towerShooter;
+
     private bool isTransitioning = false;
     private List<GameObject> activeCards = new List<GameObject>();
 
@@ -88,7 +91,8 @@ public class CardUpgradeUI : MonoBehaviour
         {
             GameObject cardObj = Instantiate(cardPrefab, cardContainer);
             activeCards.Add(cardObj);
-
+            CardSelec cardSelec = cardObj.GetComponent<CardSelec>();
+            cardSelec.Setup(card, towerShooter);
             cardObj.transform.Find("UpgradeName").GetComponent<TextMeshProUGUI>().text = card.UpgradeName;
             cardObj.transform.Find("UpgradeDescription").GetComponent<TextMeshProUGUI>().text = card.UpgradeDescription;
             cardObj.transform.Find("Image").GetComponent<Image>().sprite = card.UpgradeImage;

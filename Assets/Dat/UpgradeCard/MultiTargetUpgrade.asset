@@ -13,5 +13,13 @@ MonoBehaviour:
   m_Name: MultiTargetUpgrade
   m_EditorClassIdentifier: 
   UpgradeName: "N\u1ECF th\u1EA7n An D\u01B0\u01A1ng V\u01B0\u01A1ng"
-  UpgradeDescription: "+1 m\u1EE5c ti\xEAu"
+  UpgradeDescription: "+1 m\u1EE5c ti\xEAu c\xF3 th\u1EC3 t\u1EA5n c\xF4ng c\xF9ng
+    l\xFAc"
   UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
+  upgradeCardType: 0
+  targetStat: 2
+  statValue: 1
+  isMultiplier: 0
+  extraBulletPrefab: {fileID: 0}
+  MinionPrefab: {fileID: 0}
+  replaceMainBullet: 0
