@@ -14,12 +14,12 @@ public class TowerShooter : MonoBehaviour
     public Transform MinionSlot; // Vị trí để triệu hồi tháp phụ
 
     private float fireCountdown = 0f;
-    private List<Transform> currentTargets = new List<Transform>();
+    [HideInInspector]public List<Transform> currentTargets = new List<Transform>();
     private List<GameObject> extraWeapons = new List<GameObject>();
 
     void Start()
     {
-        InvokeRepeating(nameof(UpdateTargets), 0f, 0.5f);
+        // Remove InvokeRepeating since we'll update before each shot
     }
 
     void UpdateTargets()
@@ -48,13 +48,14 @@ public class TowerShooter : MonoBehaviour
 
     void Update()
     {
-        if (currentTargets.Count == 0)
-            return;
-
         if (fireCountdown <= 0f)
         {
-            Shoot();
-            fireCountdown = 1f / fireRate;
+            UpdateTargets(); // Update targets right before shooting
+            if (currentTargets.Count > 0) // Only shoot if we have targets
+            {
+                Shoot();
+                fireCountdown = 1f / fireRate;
+            }
         }
 
         fireCountdown -= Time.deltaTime;

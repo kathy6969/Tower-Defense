@@ -62,7 +62,7 @@ public class Bullet : MonoBehaviour
     {
         //Debug.Log("Bullet hit the target!");
         // Có thể thêm hiệu ứng va chạm ở đây
-        Destroy(gameObject);
+        //Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D other)

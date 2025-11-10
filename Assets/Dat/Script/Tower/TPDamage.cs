@@ -22,6 +22,7 @@ public class TPDamage : MonoBehaviour
             if (enemyHP != null)
             {
                 enemyHP.TakeDamage(damageAmount); // Deal 10 damage to the enemy
+                Destroy(gameObject); // Destroy the bullet after hitting the enemy
             }
         }
     }
