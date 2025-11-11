@@ -20,10 +20,9 @@ public class CardUpgradeUI : MonoBehaviour
 
     [Header("Else Settings")]
     public TowerShooter towerShooter;
-
+    public UpgradeCardManager upgradeCardManager;
     private bool isTransitioning = false;
     private List<GameObject> activeCards = new List<GameObject>();
-
     public Button rerollButton;
     private bool hasRerolled = false;
     public void ShowCardUpgradePanel()
@@ -72,16 +71,23 @@ public class CardUpgradeUI : MonoBehaviour
     {
         excludeCards ??= new List<UpgradeCard>();
 
+        // 🔥 Loại bỏ luôn những thẻ đã có ID trong UpgradeCardManager
+        List<string> ownedIDs = upgradeCardManager.ownedCardIDs;
+
         foreach (Transform child in cardContainer)
         {
             Destroy(child.gameObject);
         }
 
         List<UpgradeCard> selectedCards = new List<UpgradeCard>();
-        while (selectedCards.Count < 3)
+        int safety = 0; // tránh loop vô hạn
+        while (selectedCards.Count < 3 && safety < 100)
         {
+            safety++;
             var card = availableCards[Random.Range(0, availableCards.Length)];
-            if (!selectedCards.Contains(card) && !excludeCards.Contains(card))
+            if (!selectedCards.Contains(card) &&
+                !excludeCards.Contains(card) &&
+                !ownedIDs.Contains(card.UpgradeID)) // ✅ bỏ qua nếu đã có ID
             {
                 selectedCards.Add(card);
             }
@@ -94,6 +100,7 @@ public class CardUpgradeUI : MonoBehaviour
             CardSelec cardSelec = cardObj.GetComponent<CardSelec>();
             cardSelec.Setup(card, towerShooter);
             cardObj.transform.Find("UpgradeName").GetComponent<TextMeshProUGUI>().text = card.UpgradeName;
+            cardObj.transform.Find("UpgradeLever").GetComponent<TextMeshProUGUI>().text = "LV." + card.UpgradeLevel;
             cardObj.transform.Find("UpgradeDescription").GetComponent<TextMeshProUGUI>().text = card.UpgradeDescription;
             cardObj.transform.Find("Image").GetComponent<Image>().sprite = card.UpgradeImage;
         }

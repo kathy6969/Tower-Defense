@@ -5,11 +5,13 @@ public class CardSelec : MonoBehaviour
     public CardUpgradeUI cardUpgradeUI;
     [HideInInspector] public UpgradeCard upgradeCard;
     [HideInInspector] public TowerShooter towerShooter;
+    [HideInInspector] public UpgradeCardManager upgradeCardManager;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         cardUpgradeUI = GetComponentInParent<CardUpgradeUI>();
         towerShooter = FindAnyObjectByType<TowerShooter>();
+        upgradeCardManager = GetComponentInParent<UpgradeCardManager>();
     }
     public void OnClick()
     {
@@ -20,6 +22,7 @@ public class CardSelec : MonoBehaviour
         }
         // Gọi upgrade
         upgradeCard.ApplyUpgrade(towerShooter);
+        upgradeCardManager.AddUpgrade(upgradeCard);
         // Ẩn UI nâng cấp thẻ
         cardUpgradeUI.HideCardUpgradePanel();
     }

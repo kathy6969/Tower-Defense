@@ -310,6 +310,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 5081717101333533239}
+  - component: {fileID: 1290528891637568650}
   m_Layer: 0
   m_Name: MinionSlot
   m_TagString: Untagged
@@ -332,6 +333,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2275956104348075115}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1290528891637568650
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2337282933734081684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6371e1f05b1b3a74f84fc078018e5b74, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  orbitRadius: 2
+  rotationSpeed: 100
+  autoUpdateChildren: 0
 --- !u!1 &2576789263138236283
 GameObject:
   m_ObjectHideFlags: 0
@@ -712,6 +728,7 @@ GameObject:
   - component: {fileID: 3139565822347612419}
   - component: {fileID: 6690294355096826494}
   - component: {fileID: 3877039552174529594}
+  - component: {fileID: 6477286137352182803}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -822,15 +839,33 @@ MonoBehaviour:
   availableCards:
   - {fileID: 11400000, guid: acadd0bd2cc86f940bc5817404b51853, type: 2}
   - {fileID: 11400000, guid: ed9574794af551e4ca5cad09bc5ccffa, type: 2}
+  - {fileID: 11400000, guid: eacadfb99d2325840a4d87c357f62d98, type: 2}
   - {fileID: 11400000, guid: 1e2d41987dd493447a1f5e4a6366d825, type: 2}
   - {fileID: 11400000, guid: c8ed6f8af947d2f4a9011431a9c4ce17, type: 2}
   - {fileID: 11400000, guid: 678438c16a20e094b8502fa840c5dc8d, type: 2}
+  - {fileID: 11400000, guid: 1e3f671e0b9a0d64eb1266717b305973, type: 2}
   - {fileID: 11400000, guid: 149ba1bea57912a4ebf489c49b2fac8e, type: 2}
+  - {fileID: 11400000, guid: 606853765edc1844fae2bf1eaf26d32a, type: 2}
   - {fileID: 11400000, guid: b0b9ca57e75b8354eb0fd95e9d530d44, type: 2}
   - {fileID: 11400000, guid: 0b1dca98c670771488ff7e9c8dbe54c8, type: 2}
   easeType: 3
   towerShooter: {fileID: 1775592567176154283}
+  upgradeCardManager: {fileID: 6477286137352182803}
   rerollButton: {fileID: 3462101576457002733}
+--- !u!114 &6477286137352182803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4153184301028872665}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2f18454149e7b8b42b923960b1e8099e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  database: {fileID: 11400000, guid: 847d427730eef0d49b8f5eaf841f3547, type: 2}
+  ownedCardIDs: []
 --- !u!1 &5313003237487582907
 GameObject:
   m_ObjectHideFlags: 0
@@ -1305,8 +1340,9 @@ MonoBehaviour:
   fireRate: 1
   maxTargets: 1
   bulletPrefab: {fileID: 5087247711384696631, guid: 83e8925f72ac52c43a62b023b08a7340, type: 3}
-  firePoint: {fileID: 2275956104348075115}
+  firePoint: {fileID: 3795442827494407975}
   MinionSlot: {fileID: 5081717101333533239}
+  currentTargets: []
 --- !u!114 &1483769172100271709
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1335,7 +1371,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   baseExpRequired: 100
-  expIncreaseFactor: 1.01
+  expIncreaseFactor: 1.33
   currentExp: 0
   currentLevel: 0
   expRequiredForNext: 0

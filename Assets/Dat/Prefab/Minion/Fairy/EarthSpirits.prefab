@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: -6218446950294269195}
   m_Layer: 0
   m_Name: EarthSpirits
-  m_TagString: Untagged
+  m_TagString: SpiritsMinion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -188,10 +188,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa053af93bfd4c4882013564db315e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotationSpeed: 100
-  orbitRadius: 3
-  attackRate: 1
   towerShooter: {fileID: 0}
-  BulletPrefab: {fileID: 3523901978124585131, guid: 3cbbfbe1cbf1bee46ae8bc5903b6d4d0, type: 3}
+  bulletPrefab: {fileID: 3523901978124585131, guid: 3cbbfbe1cbf1bee46ae8bc5903b6d4d0, type: 3}
+  attackRate: 1
   bulletSpeed: 10
   bulletLifetime: 3

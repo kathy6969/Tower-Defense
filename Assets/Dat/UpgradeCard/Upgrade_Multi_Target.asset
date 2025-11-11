@@ -10,9 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: MultiTargetUpgrade
+  m_Name: Upgrade_Multi_Target
   m_EditorClassIdentifier: 
+  UpgradeID: UCMT1
   UpgradeName: "N\u1ECF th\u1EA7n An D\u01B0\u01A1ng V\u01B0\u01A1ng"
+  UpgradeLevel: 1
   UpgradeDescription: "+1 m\u1EE5c ti\xEAu c\xF3 th\u1EC3 t\u1EA5n c\xF4ng c\xF9ng
     l\xFAc"
   UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}

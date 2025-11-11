@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 868bde475e219de4c9cbc32a5be994df, type: 3}
+  m_Name: UpgradeCardDatabase
+  m_EditorClassIdentifier: 
+  allCards:
+  - {fileID: 11400000, guid: acadd0bd2cc86f940bc5817404b51853, type: 2}
+  - {fileID: 11400000, guid: ed9574794af551e4ca5cad09bc5ccffa, type: 2}
+  - {fileID: 11400000, guid: eacadfb99d2325840a4d87c357f62d98, type: 2}
+  - {fileID: 11400000, guid: 1e2d41987dd493447a1f5e4a6366d825, type: 2}
+  - {fileID: 11400000, guid: c8ed6f8af947d2f4a9011431a9c4ce17, type: 2}
+  - {fileID: 11400000, guid: 678438c16a20e094b8502fa840c5dc8d, type: 2}
+  - {fileID: 11400000, guid: 1e3f671e0b9a0d64eb1266717b305973, type: 2}
+  - {fileID: 11400000, guid: 149ba1bea57912a4ebf489c49b2fac8e, type: 2}
+  - {fileID: 11400000, guid: 606853765edc1844fae2bf1eaf26d32a, type: 2}
+  - {fileID: 11400000, guid: b0b9ca57e75b8354eb0fd95e9d530d44, type: 2}
+  - {fileID: 11400000, guid: 0b1dca98c670771488ff7e9c8dbe54c8, type: 2}

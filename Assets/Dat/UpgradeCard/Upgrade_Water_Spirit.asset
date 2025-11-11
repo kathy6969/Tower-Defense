@@ -10,15 +10,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: WaterSpiritUpgrade
+  m_Name: Upgrade_Water_Spirit
   m_EditorClassIdentifier: 
+  UpgradeID: UCWS1
   UpgradeName: "Th\u1EE7y tinh linh"
-  UpgradeDescription: "Th\u1EE7y tinh linh"
-  UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
+  UpgradeLevel: 1
+  UpgradeDescription: "Tri\u1EC7u h\u1ED3i m\u1ED9t th\u1EE7y tinh linh \u0111\u1EC3
+    h\u1ED7 tr\u1EE3 b\u1EA1n."
+  UpgradeImage: {fileID: 4164213114258598589, guid: e1210dd2dbddac4418d5326c409f18ba, type: 3}
   upgradeCardType: 2
   targetStat: 0
   statValue: 0
   isMultiplier: 0
   extraBulletPrefab: {fileID: 0}
-  MinionPrefab: {fileID: 0}
+  MinionPrefab: {fileID: 2343012676599558545, guid: 89be161192167f345b1a1a91a810e799, type: 3}
   replaceMainBullet: 0

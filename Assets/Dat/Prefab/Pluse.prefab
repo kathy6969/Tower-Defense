@@ -140,7 +140,7 @@ Transform:
   m_GameObject: {fileID: 5087247711384696631}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.1778321, y: -0.30133927, z: 0.092510425}
+  m_LocalPosition: {x: -3.947034, y: -4.977868, z: 0.092510425}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -256,7 +256,7 @@ TrailRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Time: 0.15
-  m_PreviewTimeScale: 1
+  m_PreviewTimeScale: 0
   m_Parameters:
     serializedVersion: 3
     widthMultiplier: 1
@@ -385,4 +385,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bcddc9fd72d7c644b2ee7f8b0b01c54, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageAmount: 5
+  damageAmount: 10

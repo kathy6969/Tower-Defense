@@ -4,7 +4,9 @@ using UnityEngine;
 public class UpgradeCard : ScriptableObject
 {
     [Header("UI Info")]
+    public string UpgradeID;
     public string UpgradeName;
+    public int UpgradeLevel;
     [TextArea] public string UpgradeDescription;
     public Sprite UpgradeImage;
 
