@@ -6,9 +6,11 @@ public class UpgradeCard : ScriptableObject
     [Header("UI Info")]
     public string UpgradeID;
     public string UpgradeName;
-    public int UpgradeLevel;
     [TextArea] public string UpgradeDescription;
     public Sprite UpgradeImage;
+    [Header("Upgrade Level settings")]
+    public int UpgradeLevel;
+    public UpgradeCard previousLevel;
 
     [Header("Upgrade Type")]
     public UpgradeCardType upgradeCardType;

@@ -21,6 +21,12 @@ public class UpgradeCardManager : MonoBehaviour
                 card.ApplyUpgrade(tower);
         }
     }
+    
+    public bool HasUpgrade(UpgradeCard card)
+    {
+        return ownedCardIDs.Contains(card.UpgradeID);
+    }
+
 
     // 🧠 Lưu tiến trình
     public void Save()

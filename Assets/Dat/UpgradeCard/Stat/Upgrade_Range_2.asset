@@ -14,9 +14,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   UpgradeID: UCR2
   UpgradeName: "Nh\xECn xa tr\xF4ng r\u1ED9ng"
-  UpgradeLevel: 2
   UpgradeDescription: "T\u0103ng t\u1EA7m \u0111\xE1nh"
   UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
+  UpgradeLevel: 2
+  previousLevel: {fileID: 11400000, guid: 149ba1bea57912a4ebf489c49b2fac8e, type: 2}
   upgradeCardType: 0
   targetStat: 0
   statValue: 1

@@ -11,7 +11,10 @@ public class CardUpgradeUI : MonoBehaviour
     public RectTransform CardUpgradePanel;
     public Transform cardContainer;
     public GameObject cardPrefab;
-    public UpgradeCard[] availableCards;
+
+    [Header("Database")]
+    public UpgradeCardDatabase cardDatabase;
+    private UpgradeCard[] availableCards;
 
     [Header("Tween Settings")]
     private float duration = 1f;
@@ -25,29 +28,31 @@ public class CardUpgradeUI : MonoBehaviour
     private List<GameObject> activeCards = new List<GameObject>();
     public Button rerollButton;
     private bool hasRerolled = false;
+
+    void Start()
+    {
+        // Load all cards from the database
+        availableCards = cardDatabase.allCards.ToArray();
+    }
+
     public void ShowCardUpgradePanel()
     {
         if (isTransitioning) return;
         isTransitioning = true;
         Time.timeScale = 0f;
 
-        hasRerolled = false; // reset trạng thái reroll
-        rerollButton.interactable = true;  // đảm bảo nút sáng lại
+        hasRerolled = false;
+        rerollButton.interactable = true;
 
         AddCardToContainer();
 
-        // đảm bảo anchor đúng
         CardUpgradePanel.anchorMin = new Vector2(0.5f, 0.5f);
         CardUpgradePanel.anchorMax = new Vector2(0.5f, 0.5f);
         CardUpgradePanel.pivot = new Vector2(0.5f, 0.5f);
-
-        // đặt vị trí bắt đầu ở ngoài màn hình trên
         CardUpgradePanel.anchoredPosition = new Vector2(0, screenHeight);
 
-        // tween panel xuống
-        Sequence seq = DOTween.Sequence().SetUpdate(true); // 👈 unscaled time
-        seq.Join(CardUpgradePanel.DOAnchorPosY(0, duration)
-            .SetEase(easeType));
+        Sequence seq = DOTween.Sequence().SetUpdate(true);
+        seq.Join(CardUpgradePanel.DOAnchorPosY(0, duration).SetEase(easeType));
         seq.OnComplete(() => isTransitioning = false);
     }
 
@@ -56,9 +61,8 @@ public class CardUpgradeUI : MonoBehaviour
         if (isTransitioning) return;
         isTransitioning = true;
 
-        Sequence seq = DOTween.Sequence().SetUpdate(true); // 👈 unscaled time
-        seq.Join(CardUpgradePanel.DOAnchorPosY(screenHeight, duration)
-            .SetEase(easeType));
+        Sequence seq = DOTween.Sequence().SetUpdate(true);
+        seq.Join(CardUpgradePanel.DOAnchorPosY(screenHeight, duration).SetEase(easeType));
         seq.OnComplete(() =>
         {
             isTransitioning = false;
@@ -70,35 +74,37 @@ public class CardUpgradeUI : MonoBehaviour
     public void AddCardToContainer(List<UpgradeCard> excludeCards = null)
     {
         excludeCards ??= new List<UpgradeCard>();
-
-        // 🔥 Loại bỏ luôn những thẻ đã có ID trong UpgradeCardManager
         List<string> ownedIDs = upgradeCardManager.ownedCardIDs;
 
         foreach (Transform child in cardContainer)
-        {
             Destroy(child.gameObject);
-        }
 
         List<UpgradeCard> selectedCards = new List<UpgradeCard>();
-        int safety = 0; // tránh loop vô hạn
+        int safety = 0;
+
         while (selectedCards.Count < 3 && safety < 100)
         {
             safety++;
+
             var card = availableCards[Random.Range(0, availableCards.Length)];
-            if (!selectedCards.Contains(card) &&
-                !excludeCards.Contains(card) &&
-                !ownedIDs.Contains(card.UpgradeID)) // ✅ bỏ qua nếu đã có ID
-            {
-                selectedCards.Add(card);
-            }
+
+            if (selectedCards.Contains(card)) continue;
+            if (excludeCards.Contains(card)) continue;
+            if (upgradeCardManager.HasUpgrade(card)) continue;
+
+            if (!IsCardUnlocked(card)) continue;
+
+            selectedCards.Add(card);
         }
 
         foreach (UpgradeCard card in selectedCards)
         {
             GameObject cardObj = Instantiate(cardPrefab, cardContainer);
             activeCards.Add(cardObj);
+
             CardSelec cardSelec = cardObj.GetComponent<CardSelec>();
             cardSelec.Setup(card, towerShooter);
+
             cardObj.transform.Find("UpgradeName").GetComponent<TextMeshProUGUI>().text = card.UpgradeName;
             cardObj.transform.Find("UpgradeLever").GetComponent<TextMeshProUGUI>().text = "LV." + card.UpgradeLevel;
             cardObj.transform.Find("UpgradeDescription").GetComponent<TextMeshProUGUI>().text = card.UpgradeDescription;
@@ -108,12 +114,6 @@ public class CardUpgradeUI : MonoBehaviour
 
     public void RerollCards()
     {
-        // if (hasRerolled) return;
-        // hasRerolled = true;
-
-        // rerollButton.interactable = false;
-
-        // Lưu lại danh sách UpgradeCard đang hiển thị
         List<UpgradeCard> currentCards = new List<UpgradeCard>();
         foreach (Transform child in cardContainer)
         {
@@ -136,10 +136,8 @@ public class CardUpgradeUI : MonoBehaviour
             oldCards.Add(child.gameObject);
             child.localRotation = Quaternion.identity;
 
-            // Hiệu ứng xoay 180° + mờ dần
             Tween t = child.DOLocalRotate(new Vector3(0, 180, 0), 0.5f, RotateMode.FastBeyond360)
-                .SetEase(Ease.InBack)
-                .SetUpdate(true);
+                .SetEase(Ease.InBack).SetUpdate(true);
 
             CanvasGroup cg = child.GetComponent<CanvasGroup>();
             if (cg == null) cg = child.gameObject.AddComponent<CanvasGroup>();
@@ -150,10 +148,8 @@ public class CardUpgradeUI : MonoBehaviour
 
         seq.AppendCallback(() =>
         {
-            // Sinh thẻ mới khác hoàn toàn với thẻ cũ
             AddCardToContainer(currentCards);
 
-            // Cho thẻ mới xuất hiện bằng hiệu ứng xoay ngược + hiện dần
             foreach (Transform child in cardContainer)
             {
                 if (!oldCards.Contains(child.gameObject))
@@ -165,16 +161,22 @@ public class CardUpgradeUI : MonoBehaviour
                     cg.alpha = 0f;
 
                     child.DOLocalRotate(Vector3.zero, 0.35f, RotateMode.FastBeyond360)
-                        .SetEase(Ease.OutBack)
-                        .SetUpdate(true);
+                        .SetEase(Ease.OutBack).SetUpdate(true);
 
                     cg.DOFade(1f, 0.35f).SetEase(Ease.OutQuad).SetUpdate(true);
                 }
             }
 
-            // Sau 0.5 giây mới xóa hẳn thẻ cũ
             StartCoroutine(DestroyAfterDelay(oldCards, 0.5f));
         });
+    }
+
+    private bool IsCardUnlocked(UpgradeCard card)
+    {
+        if (card.previousLevel == null)
+            return true;
+
+        return upgradeCardManager.HasUpgrade(card.previousLevel);
     }
 
     private IEnumerator DestroyAfterDelay(List<GameObject> cards, float delay)
@@ -185,18 +187,15 @@ public class CardUpgradeUI : MonoBehaviour
         {
             if (card != null)
             {
-                DOTween.Kill(card.transform); // Hủy tween liên quan object này
+                DOTween.Kill(card.transform);
                 Destroy(card);
             }
         }
     }
 
-
     void RemoveCard()
     {
         foreach (Transform child in cardContainer)
-        {
             Destroy(child.gameObject);
-        }
     }
 }
