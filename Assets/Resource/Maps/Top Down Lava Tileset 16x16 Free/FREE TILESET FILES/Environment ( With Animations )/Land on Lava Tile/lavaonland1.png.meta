@@ -116,10 +116,10 @@ TextureImporter:
       name: lavaonland1_5
       rect:
         serializedVersion: 2
-        x: 28
-        y: 128
-        width: 14
-        height: 17
+        x: 48
+        y: 129
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -128,8 +128,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5230e98d77ac95243af0eee8384c82ad
-      internalID: -239357798
+      spriteID: 5350db071280c6f49acfb62b626fec72
+      internalID: -419939197
       vertices: []
       indices: 
       edges: []
@@ -138,10 +138,10 @@ TextureImporter:
       name: lavaonland1_6
       rect:
         serializedVersion: 2
-        x: 42
-        y: 128
-        width: 14
-        height: 17
+        x: 64
+        y: 129
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -150,8 +150,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 35d7f092df520064383d147882d340d4
-      internalID: 393040101
+      spriteID: 85523f4c95ccf624a9cd81a3abeea0b1
+      internalID: -1608635023
       vertices: []
       indices: 
       edges: []
@@ -160,10 +160,10 @@ TextureImporter:
       name: lavaonland1_7
       rect:
         serializedVersion: 2
-        x: 56
+        x: 80
         y: 128
-        width: 14
-        height: 17
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -172,30 +172,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 9c6c643692307234da7a78e428795180
-      internalID: -414069937
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_8
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 128
-        width: 14
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 7cbe340a8c032114c8a5f4a6dc04e178
-      internalID: 1455514802
+      spriteID: 8464dc015f8c9b44ba9d8f7b1326367e
+      internalID: -1845004197
       vertices: []
       indices: 
       edges: []
@@ -204,10 +182,10 @@ TextureImporter:
       name: lavaonland1_10
       rect:
         serializedVersion: 2
-        x: 14
+        x: 32
         y: 112
-        width: 14
-        height: 18
+        width: 16
+        height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -216,8 +194,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2420755639a58046b99e2a46ba32b06
-      internalID: -1640077471
+      spriteID: 424a37b100309c440894d1e38384eb96
+      internalID: 80430668
       vertices: []
       indices: 
       edges: []
@@ -226,9 +204,9 @@ TextureImporter:
       name: lavaonland1_11
       rect:
         serializedVersion: 2
-        x: 28
+        x: 48
         y: 112
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -238,8 +216,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8e6c13d6a3470b147a88e4915d259097
-      internalID: -1918248612
+      spriteID: d786e0bdd7cfc9743a4aced6008e0e58
+      internalID: -1786698229
       vertices: []
       indices: 
       edges: []
@@ -248,9 +226,9 @@ TextureImporter:
       name: lavaonland1_12
       rect:
         serializedVersion: 2
-        x: 42
+        x: 64
         y: 112
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -260,8 +238,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 640f1e5dce3faa04c817dee3cb2a6b49
-      internalID: -579918014
+      spriteID: 8be1f2000cdded94d8ee9d1573ea9f3e
+      internalID: 481569542
       vertices: []
       indices: 
       edges: []
@@ -270,9 +248,9 @@ TextureImporter:
       name: lavaonland1_13
       rect:
         serializedVersion: 2
-        x: 56
+        x: 83
         y: 112
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -282,52 +260,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a3eada755ac9abd46ae618e7813ea7ec
-      internalID: 1279405425
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_14
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 112
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 10ad59bf9652fce4a8f28581ab7809a4
-      internalID: 1139743036
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_15
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 112
-        width: 15
-        height: 17
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: ce1bfe2b7434c684c898e9a557639e1f
-      internalID: -378875102
+      spriteID: df0c6d98591e60547bbe27b90ef6b891
+      internalID: 108179855
       vertices: []
       indices: 
       edges: []
@@ -336,9 +270,9 @@ TextureImporter:
       name: lavaonland1_18
       rect:
         serializedVersion: 2
-        x: 11
+        x: 48
         y: 96
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -348,8 +282,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 08f8e43baa86c2948b48e8a6f16fb986
-      internalID: -748919091
+      spriteID: ed822eeb34346c14088f2bb01f941465
+      internalID: -1942426820
       vertices: []
       indices: 
       edges: []
@@ -358,9 +292,9 @@ TextureImporter:
       name: lavaonland1_19
       rect:
         serializedVersion: 2
-        x: 28
+        x: 64
         y: 96
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -370,8 +304,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3c647b740bcded246bdc438e3fc76bba
-      internalID: 2126170698
+      spriteID: 8598cba5d0974ad4fafcaf84a650eaef
+      internalID: 690996012
       vertices: []
       indices: 
       edges: []
@@ -380,9 +314,9 @@ TextureImporter:
       name: lavaonland1_20
       rect:
         serializedVersion: 2
-        x: 42
+        x: 83
         y: 96
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -392,52 +326,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4552a0edfdbd27e4dacb2dc9241ba6e2
-      internalID: -913184248
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_21
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 96
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 269d8783519997c439f298b31c834fa9
-      internalID: 350490289
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_22
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 96
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: a119ae06db83e6b4ca6596776806d898
-      internalID: 1625108677
+      spriteID: 6d18524a30f6112409bd4816414e6ac3
+      internalID: 1627166081
       vertices: []
       indices: 
       edges: []
@@ -446,9 +336,9 @@ TextureImporter:
       name: lavaonland1_23
       rect:
         serializedVersion: 2
-        x: 84
-        y: 96
-        width: 15
+        x: 11
+        y: 80
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -458,8 +348,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ac7540a8d29e8f843a1528151941fb36
-      internalID: -383799791
+      spriteID: d8b9dad1783f707469f40badbb2e47df
+      internalID: -363145861
       vertices: []
       indices: 
       edges: []
@@ -468,9 +358,9 @@ TextureImporter:
       name: lavaonland1_26
       rect:
         serializedVersion: 2
-        x: 11
+        x: 64
         y: 80
-        width: 17
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -480,102 +370,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3e28a0cbee8476c48bd0db2bae17f3a9
-      internalID: -1286167453
+      spriteID: 6c43708d70957ca4ab683d4d39a562a3
+      internalID: -791699184
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: lavaonland1_27
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 80
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: c1f3e5e7805fca74db657c1eb19b40f6
-      internalID: -524694770
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_28
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 80
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2554c12bc96b7434caf244a6dfbbdcbf
-      internalID: -602777961
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_29
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 80
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 18b6ec66b42fff74582433ecbd4c3b10
-      internalID: -442093356
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_30
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 80
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: e4d3471a80010654e8e975b044672a58
-      internalID: 1064238860
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_31
       rect:
         serializedVersion: 2
         x: 84
@@ -590,8 +392,52 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b2e215635c952d94eacf301133522371
-      internalID: -1161478033
+      spriteID: 72205164bd9d22049b11011a0952b3ca
+      internalID: -811619627
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_30
+      rect:
+        serializedVersion: 2
+        x: 13
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2abc595dee623514f976c4cafb5d4ffb
+      internalID: -547880544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_31
+      rect:
+        serializedVersion: 2
+        x: 29
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03239e87ca4a3e84baed81c2a35b5b8c
+      internalID: -1830959775
       vertices: []
       indices: 
       edges: []
@@ -600,9 +446,9 @@ TextureImporter:
       name: lavaonland1_34
       rect:
         serializedVersion: 2
-        x: 13
+        x: 82
         y: 64
-        width: 15
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -612,124 +458,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 667c13accc0ce704ab6038b7f9edf1fd
-      internalID: 1038398559
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_35
-      rect:
-        serializedVersion: 2
-        x: 28
-        y: 64
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 2d68dfc8d14c40545be79a432e341693
-      internalID: 952834180
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_36
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 64
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8b2517c513ad65d47a5d3fdb1019fd55
-      internalID: -883968053
+      spriteID: c19738f4e4c5b7e4797aa9c091a34641
+      internalID: 1549232848
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
       name: lavaonland1_37
-      rect:
-        serializedVersion: 2
-        x: 56
-        y: 64
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 22b210a6cd25ad14d89721024c52dc1a
-      internalID: -132394237
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_38
-      rect:
-        serializedVersion: 2
-        x: 70
-        y: 64
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 114b9b7e013c345449e78922fea4baa4
-      internalID: -134409034
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_39
-      rect:
-        serializedVersion: 2
-        x: 84
-        y: 64
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 8081005d6e4b1974faebe00d92c535df
-      internalID: 1684843372
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_41
       rect:
         serializedVersion: 2
         x: 12
@@ -744,19 +480,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 94149bfb9142bee42a9da00de482a4f3
-      internalID: 872697928
+      spriteID: eb1a4ae530aca924fa236e6d7494295c
+      internalID: 1127530417
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lavaonland1_42
+      name: lavaonland1_38
       rect:
         serializedVersion: 2
-        x: 28
+        x: 29
         y: 48
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -766,19 +502,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3cbd1fca57fc6a4c95f0ec910fa3be3
-      internalID: 1336867672
+      spriteID: a7563df0ec031f943be2729e4abfd71e
+      internalID: 135116119
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lavaonland1_43
+      name: lavaonland1_39
       rect:
         serializedVersion: 2
-        x: 42
+        x: 48
         y: 48
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -788,19 +524,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 322f98c97a63aa74cbded618c25ee94a
-      internalID: 104324096
+      spriteID: 26ab93980d49c5f4caa62597f80eb13b
+      internalID: -30044999
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: lavaonland1_44
+      name: lavaonland1_41
       rect:
         serializedVersion: 2
-        x: 56
+        x: 83
         y: 48
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -810,8 +546,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 41e1b3e03facfc140aa4cac2fb9a0280
-      internalID: -833128304
+      spriteID: 77894a48cd3896146a9ed8c4b551c80b
+      internalID: -676164046
       vertices: []
       indices: 
       edges: []
@@ -820,9 +556,9 @@ TextureImporter:
       name: lavaonland1_45
       rect:
         serializedVersion: 2
-        x: 70
-        y: 48
-        width: 14
+        x: 29
+        y: 32
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -832,8 +568,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b672b78b5eeb73c4097c173e7d1b79a9
-      internalID: -178162627
+      spriteID: d88060bbff4603846b6017d6f1857b2d
+      internalID: -832405289
       vertices: []
       indices: 
       edges: []
@@ -842,9 +578,9 @@ TextureImporter:
       name: lavaonland1_46
       rect:
         serializedVersion: 2
-        x: 84
-        y: 48
-        width: 15
+        x: 48
+        y: 32
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -854,8 +590,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 507a983323c129243a01570607e59387
-      internalID: -1313040492
+      spriteID: 79bdb3e4ab676c144b1ab81da96c37d3
+      internalID: -1352258993
       vertices: []
       indices: 
       edges: []
@@ -864,9 +600,9 @@ TextureImporter:
       name: lavaonland1_49
       rect:
         serializedVersion: 2
-        x: 13
+        x: 101
         y: 32
-        width: 15
+        width: 11
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -876,8 +612,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f6a458dac6751974e91edf968c72230e
-      internalID: -370772687
+      spriteID: 16ea8b141323fe9469876c9b64f8292e
+      internalID: -1962730828
       vertices: []
       indices: 
       edges: []
@@ -886,9 +622,9 @@ TextureImporter:
       name: lavaonland1_50
       rect:
         serializedVersion: 2
-        x: 28
+        x: 13
         y: 32
-        width: 14
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -898,30 +634,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: eecdc5b4e83c26645a41817ea0652514
-      internalID: 2133875699
-      vertices: []
-      indices: 
-      edges: []
-      weights: []
-    - serializedVersion: 2
-      name: lavaonland1_51
-      rect:
-        serializedVersion: 2
-        x: 42
-        y: 32
-        width: 14
-        height: 16
-      alignment: 0
-      pivot: {x: 0.5, y: 0.5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      customData: 
-      outline: []
-      physicsShape: []
-      tessellationDetail: 0
-      bones: []
-      spriteID: 33f7dc67b2676eb48aafce32a4c6f9dd
-      internalID: 2055754014
+      spriteID: a72e26f659420ab41bdf80c0da559ac8
+      internalID: 246772591
       vertices: []
       indices: 
       edges: []
@@ -930,9 +644,9 @@ TextureImporter:
       name: lavaonland1_52
       rect:
         serializedVersion: 2
-        x: 56
-        y: 32
-        width: 14
+        x: 29
+        y: 16
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -942,8 +656,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: b3960ea524e237243bebb727244bd369
-      internalID: 1230071648
+      spriteID: cec4dc5a42febfe4da27b83b7f3334b2
+      internalID: 778226214
       vertices: []
       indices: 
       edges: []
@@ -952,9 +666,9 @@ TextureImporter:
       name: lavaonland1_53
       rect:
         serializedVersion: 2
-        x: 70
-        y: 32
-        width: 14
+        x: 48
+        y: 16
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -964,8 +678,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3fe783cfd8a476e4c9ab37abd063fac8
-      internalID: 1004138683
+      spriteID: b15986ccd8c04724fb82d2b7fea1d06a
+      internalID: 770335486
       vertices: []
       indices: 
       edges: []
@@ -974,9 +688,9 @@ TextureImporter:
       name: lavaonland1_54
       rect:
         serializedVersion: 2
-        x: 84
-        y: 32
-        width: 14
+        x: 66
+        y: 16
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -986,8 +700,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 537da66879a4aa541ae6b8712863c2ad
-      internalID: 334957953
+      spriteID: da338081605efaa40b3d0ae34e274423
+      internalID: 1706499315
       vertices: []
       indices: 
       edges: []
@@ -996,9 +710,9 @@ TextureImporter:
       name: lavaonland1_58
       rect:
         serializedVersion: 2
-        x: 29
-        y: 16
-        width: 13
+        x: 16
+        y: 0
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1008,8 +722,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: ba492952733fe6e4a96571a3819f73c4
-      internalID: -821408478
+      spriteID: 1636701ae3ab3fc429603688676db588
+      internalID: 681034775
       vertices: []
       indices: 
       edges: []
@@ -1018,9 +732,9 @@ TextureImporter:
       name: lavaonland1_59
       rect:
         serializedVersion: 2
-        x: 42
-        y: 16
-        width: 14
+        x: 32
+        y: 0
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1030,8 +744,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: c00ff357c2aa72048aca9530238f26cd
-      internalID: -959212470
+      spriteID: e0fb16db56cda23409a5b8989fbde501
+      internalID: 1209336834
       vertices: []
       indices: 
       edges: []
@@ -1040,9 +754,9 @@ TextureImporter:
       name: lavaonland1_60
       rect:
         serializedVersion: 2
-        x: 56
-        y: 16
-        width: 14
+        x: 48
+        y: 0
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1052,8 +766,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4fd693b8dad24084b9a735e4d4ecdb7b
-      internalID: 1939610651
+      spriteID: 57db8a8bd7b5d504a8436dd284415cfb
+      internalID: -1380591274
       vertices: []
       indices: 
       edges: []
@@ -1062,9 +776,9 @@ TextureImporter:
       name: lavaonland1_61
       rect:
         serializedVersion: 2
-        x: 70
-        y: 16
-        width: 12
+        x: 64
+        y: 0
+        width: 16
         height: 16
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
@@ -1074,8 +788,382 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 56b35954316f5c04db56f23fcbf5ddac
-      internalID: 2117201015
+      spriteID: 8b76013914a4c9448a44dcdaf1be0e2d
+      internalID: -484407786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_3
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 128
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3c46a4f2494b99429dd6090e13a1b54
+      internalID: 1062725171
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_4
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 129
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 590394918c55c4a42af00bd517d86f53
+      internalID: 1888882809
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_9
+      rect:
+        serializedVersion: 2
+        x: 14
+        y: 112
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e10f24dc248f64c408cd910bd3a68115
+      internalID: -114274351
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_16
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 335e17319e45f1f498343147b0efea85
+      internalID: 494739496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_17
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 96
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a3fc44872c38130488a482654d28f610
+      internalID: -473950638
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_24
+      rect:
+        serializedVersion: 2
+        x: 32
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1fe77c43a7e65d64cac131e8b8a41350
+      internalID: 260389695
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_25
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 80
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 532800e2cb0e3764e8cdd6dde7948daa
+      internalID: 899296312
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_32
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cae6fce6584647a49a05332022962ac5
+      internalID: 1759468563
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_33
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 64
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 977f4608d0c67a34298406fab3976983
+      internalID: 1958511981
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_40
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 48
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 64206e9cb0501944d9f3338921d86c1d
+      internalID: 365162664
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_47
+      rect:
+        serializedVersion: 2
+        x: 66
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 36be4021c36572c428a433b60715736f
+      internalID: -1729289814
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_48
+      rect:
+        serializedVersion: 2
+        x: 82
+        y: 32
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3deeff2415ff5b74b9dc80224979dad7
+      internalID: -992660153
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_55
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03e1973bc3de0d643844db0abff36462
+      internalID: 1157339773
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_56
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 16
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f0b76ed52da2abe40a1f089ed6aa4b0b
+      internalID: -896794597
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_57
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abb43b86be83abb4684ce2eb1c17d703
+      internalID: -1802216950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_62
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 74d76ecb963af7c49b3dec7e37f8e751
+      internalID: -1217690311
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: lavaonland1_63
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 0
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fa9313ecb1acd254cbf46c3d3d984ffc
+      internalID: -1457951124
       vertices: []
       indices: 
       edges: []
@@ -1096,76 +1184,68 @@ TextureImporter:
     nameFileIdTable:
       lavaonland1_0: 6122488203018710560
       lavaonland1_1: 1108153097
-      lavaonland1_10: -1640077471
-      lavaonland1_11: -1918248612
-      lavaonland1_12: -579918014
-      lavaonland1_13: 1279405425
-      lavaonland1_14: 1139743036
-      lavaonland1_15: -378875102
-      lavaonland1_16: -1157465750
-      lavaonland1_17: -487234610
-      lavaonland1_18: -748919091
-      lavaonland1_19: 2126170698
-      lavaonland1_2: -1312978540
-      lavaonland1_20: -913184248
-      lavaonland1_21: 350490289
-      lavaonland1_22: 1625108677
-      lavaonland1_23: -383799791
-      lavaonland1_24: -1868319788
-      lavaonland1_25: -1163572661
-      lavaonland1_26: -1286167453
-      lavaonland1_27: -524694770
-      lavaonland1_28: -602777961
-      lavaonland1_29: -442093356
-      lavaonland1_3: -1609140744
-      lavaonland1_30: 1064238860
-      lavaonland1_31: -1161478033
-      lavaonland1_32: -2093720070
-      lavaonland1_33: -641745737
-      lavaonland1_34: 1038398559
-      lavaonland1_35: 952834180
-      lavaonland1_36: -883968053
-      lavaonland1_37: -132394237
-      lavaonland1_38: -134409034
-      lavaonland1_39: 1684843372
-      lavaonland1_4: 68304244
-      lavaonland1_40: 1588728089
-      lavaonland1_41: 872697928
-      lavaonland1_42: 1336867672
-      lavaonland1_43: 104324096
-      lavaonland1_44: -833128304
-      lavaonland1_45: -178162627
-      lavaonland1_46: -1313040492
-      lavaonland1_47: -891960647
-      lavaonland1_48: 1640062406
-      lavaonland1_49: -370772687
-      lavaonland1_5: -239357798
-      lavaonland1_50: 2133875699
-      lavaonland1_51: 2055754014
-      lavaonland1_52: 1230071648
-      lavaonland1_53: 1004138683
-      lavaonland1_54: 334957953
-      lavaonland1_55: -143653885
-      lavaonland1_56: 1717902708
-      lavaonland1_57: 142879412
-      lavaonland1_58: -821408478
-      lavaonland1_59: -959212470
-      lavaonland1_6: 393040101
-      lavaonland1_60: 1939610651
-      lavaonland1_61: 2117201015
-      lavaonland1_62: -1201061042
-      lavaonland1_63: 1608773103
-      lavaonland1_64: 1703917633
-      lavaonland1_65: -1280580521
-      lavaonland1_66: 1426913415
-      lavaonland1_67: 618798862
-      lavaonland1_68: -915707305
-      lavaonland1_69: -225648034
-      lavaonland1_7: -414069937
-      lavaonland1_70: -654068689
-      lavaonland1_71: 708190598
-      lavaonland1_8: 1455514802
-      lavaonland1_9: -1320540789
+      lavaonland1_10: 80430668
+      lavaonland1_11: -1786698229
+      lavaonland1_12: 481569542
+      lavaonland1_13: 108179855
+      lavaonland1_14: 442389572
+      lavaonland1_15: 905665941
+      lavaonland1_16: 494739496
+      lavaonland1_17: -473950638
+      lavaonland1_18: -1942426820
+      lavaonland1_19: 690996012
+      lavaonland1_2: -1820555801
+      lavaonland1_20: 1627166081
+      lavaonland1_21: -1606979483
+      lavaonland1_22: -22030772
+      lavaonland1_23: -363145861
+      lavaonland1_24: 260389695
+      lavaonland1_25: 899296312
+      lavaonland1_26: -791699184
+      lavaonland1_27: -811619627
+      lavaonland1_28: -1353114370
+      lavaonland1_29: 48550095
+      lavaonland1_3: 1062725171
+      lavaonland1_30: -547880544
+      lavaonland1_31: -1830959775
+      lavaonland1_32: 1759468563
+      lavaonland1_33: 1958511981
+      lavaonland1_34: 1549232848
+      lavaonland1_35: 1305286615
+      lavaonland1_36: -1170530449
+      lavaonland1_37: 1127530417
+      lavaonland1_38: 135116119
+      lavaonland1_39: -30044999
+      lavaonland1_4: 1888882809
+      lavaonland1_40: 365162664
+      lavaonland1_41: -676164046
+      lavaonland1_42: 1400279379
+      lavaonland1_43: -1071113105
+      lavaonland1_44: 1484870
+      lavaonland1_45: -832405289
+      lavaonland1_46: -1352258993
+      lavaonland1_47: -1729289814
+      lavaonland1_48: -992660153
+      lavaonland1_49: -1962730828
+      lavaonland1_5: -419939197
+      lavaonland1_50: 246772591
+      lavaonland1_51: 1605766323
+      lavaonland1_52: 778226214
+      lavaonland1_53: 770335486
+      lavaonland1_54: 1706499315
+      lavaonland1_55: 1157339773
+      lavaonland1_56: -896794597
+      lavaonland1_57: -1802216950
+      lavaonland1_58: 681034775
+      lavaonland1_59: 1209336834
+      lavaonland1_6: -1608635023
+      lavaonland1_60: -1380591274
+      lavaonland1_61: -484407786
+      lavaonland1_62: -1217690311
+      lavaonland1_63: -1457951124
+      lavaonland1_7: -1845004197
+      lavaonland1_8: -1907548894
+      lavaonland1_9: -114274351
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
