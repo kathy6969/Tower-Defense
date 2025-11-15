@@ -188,6 +188,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9aa053af93bfd4c4882013564db315e2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spiritType: 2
   towerShooter: {fileID: 0}
   bulletPrefab: {fileID: 7865504619692298147, guid: c91a54c8fa774cf48b517de16ca21ad5, type: 3}
   attackRate: 1

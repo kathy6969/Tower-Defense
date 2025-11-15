@@ -52,22 +52,6 @@ public class Bullet : MonoBehaviour
         // Tính góc xoay (không trừ 90 độ nữa)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
-
-        // Đến mục tiêu thì phá hủy
-        if (travelPercent >= 1f)
-            HitTarget();
     }
 
-    void HitTarget()
-    {
-        //Debug.Log("Bullet hit the target!");
-        // Có thể thêm hiệu ứng va chạm ở đây
-        //Destroy(gameObject);
-    }
-
-    private void OnTriggerEnter2D(Collider2D other)
-    {
-        if (other.CompareTag("Enemy"))
-            HitTarget();
-    }
 }

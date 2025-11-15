@@ -3,6 +3,8 @@ using System.Collections;
 
 public class Spitits : MonoBehaviour
 {
+    public enum SpiritType { Kim, Moc, Thuy, Hoa, Tho }
+    public SpiritType spiritType;
     [Header("Attack Settings")]
     public TowerShooter towerShooter;
     public GameObject bulletPrefab;
