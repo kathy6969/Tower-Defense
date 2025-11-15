@@ -1,7 +1,7 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// ⚠️ SỬA 1: Đổi lớp kế thừa
+// ⚠️ SỬA 1: Đổi lớp kế thừa (Giữ nguyên)
 public class EnemyAttackState : BaseAttackState // 👈 Đổi từ EnemyState
 {
     [Header("Cấu hình Cận chiến")]
@@ -12,11 +12,27 @@ public class EnemyAttackState : BaseAttackState // 👈 Đổi từ EnemyState
     // ----- ĐÃ XÓA: attackCooldown, attackAnimationDuration, isAttacking -----
     // (Vì chúng đã nằm trong lớp cha 'BaseAttackState')
 
+    // ⚠️ ĐÃ THÊM: Biến lưu script hitbox
+    private EnemyHitbox hitboxScript;
+
     public override void OnEnter(EnemyController enemy)
     {
         base.OnEnter(enemy); // 👈 Gọi hàm của lớp cha
+
+        // ⚠️ ĐÃ THÊM: Lấy script hitbox khi vào state
         if (attackBox != null)
+        {
             attackBox.SetActive(false);
+            hitboxScript = attackBox.GetComponent<EnemyHitbox>();
+            if (hitboxScript == null)
+            {
+                Debug.LogError("Không tìm thấy EnemyHitbox script trên " + attackBox.name + "!");
+            }
+        }
+        else
+        {
+            Debug.LogError("Chưa gán attackBox (hitbox) cho " + this.name + " trên quái " + enemy.name);
+        }
     }
 
     // ----- ĐÃ XÓA: Hàm OnUpdate() -----
@@ -31,10 +47,17 @@ public class EnemyAttackState : BaseAttackState // 👈 Đổi từ EnemyState
         if (animator != null && !string.IsNullOrEmpty(animationName))
             animator.Play(animationName);
 
+        // ⚠️ ĐÃ THÊM: Gán sát thương cho hitbox TRƯỚC KHI BẬT
+        if (hitboxScript != null)
+        {
+            // Lấy sát thương đã tính toán từ Controller
+            hitboxScript.damage = enemy.GetCurrentDamage();
+        }
+
         // Logic Hitbox
         yield return new WaitForSeconds(enableHitboxTime);
         if (attackBox != null)
-            attackBox.SetActive(true);
+            attackBox.SetActive(true); // 👈 Lúc này OnEnable() của hitbox sẽ chạy
 
         float hitboxDuration = disableHitboxTime - enableHitboxTime;
         if (hitboxDuration > 0)
@@ -48,7 +71,13 @@ public class EnemyAttackState : BaseAttackState // 👈 Đổi từ EnemyState
             yield return new WaitForSeconds(remainingAnimTime);
 
         isAttacking = false;
-        enemy.ChangeState(enemy.idleState);
+
+        // ⚠️ ĐÃ THÊM: Kiểm tra nếu quái còn sống thì mới về Idle
+        // (Nếu Player đánh chết quái giữa lúc đang tấn công)
+        if (!enemy.IsDead())
+        {
+            enemy.ChangeState(enemy.idleState);
+        }
     }
 
     public override void OnExit()

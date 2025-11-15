@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.UI; // 👈 Đừng quên dòng này
 
 public class EnemyController : MonoBehaviour
 {
@@ -16,11 +17,17 @@ public class EnemyController : MonoBehaviour
     [Header("States")]
     public EnemyIdleState idleState;
     public EnemyMoveState moveState;
-
-    // ⚠️ SỬA 1: ĐÃ ĐỔI KIỂU CỦA 'attackState'
-    // Giờ nó có thể nhận BẤT KỲ state nào kế thừa từ 'BaseAttackState'
-    // (Bạn kéo EnemyAttackState hay EnemyRangedAttackState vào đây đều được)
     public BaseAttackState attackState;
+
+    [Header("Stats")]
+    public EnemyStatsData enemyData; // 👈 Kéo file ScriptableObject data vào đây
+    private float currentHealth;
+    private float currentDamage;
+    private float maxHealth;
+    private bool isDead = false;
+
+    [Header("UI")]
+    public Image healthBarFill; // 👈 Kéo fill-image của thanh máu vào đây
 
     [Header("Flip Logic")]
     [HideInInspector] public bool isFacingRight = true;
@@ -29,29 +36,51 @@ public class EnemyController : MonoBehaviour
     [HideInInspector] public Transform targetPlayer;
     private EnemyState currentState;
 
-    // ----- 1. BIẾN ĐỂ ĐẾM COOLDOWN -----
     private float attackTimer;
     // -------------------------------------
 
     void Start()
     {
+        InitializeStats();
         ChangeState(idleState);
+    }
+
+    void InitializeStats()
+    {
+        if (enemyData == null)
+        {
+            Debug.LogError("Chưa gán EnemyStatsData cho " + gameObject.name);
+            return;
+        }
+
+        int levelFactor = Mathf.Max(0, enemyData.level - 1);
+
+        maxHealth = enemyData.baseHealth + (enemyData.healthPerLevel * levelFactor);
+        currentHealth = maxHealth;
+        currentDamage = enemyData.baseDamage + (enemyData.damagePerLevel * levelFactor);
+
+        isDead = false;
+
+        // Cập nhật thanh máu lần đầu (để nó đầy)
+        UpdateHealthBar();
     }
 
     void Update()
     {
+        if (isDead) return;
+
         currentState?.OnUpdate();
 
-        // ----- 2. LOGIC ĐẾM NGƯỢC COOLDOWN (LUÔN CHẠY) -----
         if (attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
         }
-        // --------------------------------------------------
     }
 
     public void ChangeState(EnemyState newState)
     {
+        if (isDead && newState != null) return;
+
         if (currentState == newState) return;
 
         currentState?.OnExit();
@@ -80,20 +109,90 @@ public class EnemyController : MonoBehaviour
         return targetPlayer;
     }
 
-    // ----- 3. HÀM ĐỂ STATE KIỂM TRA COOLDOWN -----
     public bool IsAttackReady()
     {
         return attackTimer <= 0;
     }
 
-    // ----- 4. HÀM ĐỂ ATTACKSTATE RESET COOLDOWN (ĐÃ SỬA) -----
-    // ⚠️ SỬA 2: Sửa hàm này để nó 'nhận' cooldown
     public void ResetAttackCooldown(float cooldown)
     {
-        // Nó nhận giá trị cooldown từ bất kỳ state nào gọi nó
         attackTimer = cooldown;
     }
-    // -------------------------------------------------
+
+    public float GetCurrentDamage()
+    {
+        return currentDamage;
+    }
+
+    public bool IsDead()
+    {
+        return isDead;
+    }
+
+    public void TakeDamage(float damageAmount)
+    {
+        if (isDead) return;
+
+        currentHealth -= damageAmount;
+        Debug.Log(gameObject.name + " nhận " + damageAmount + " sát thương, còn " + currentHealth + " HP");
+
+        // Cập nhật thanh máu UI (nếu có)
+        UpdateHealthBar();
+
+        if (currentHealth <= 0)
+        {
+            currentHealth = 0;
+            Die();
+        }
+        else
+        {
+            // Tùy chọn: Bật animation "Bị đánh" (Hit)
+            // animator.SetTrigger("Hit");
+        }
+    }
+
+    private void Die()
+    {
+        isDead = true;
+        Debug.Log(gameObject.name + " đã chết.");
+
+        ChangeState(null);
+
+        Collider2D[] colliders = GetComponents<Collider2D>();
+        foreach (var col in colliders)
+        {
+            col.enabled = false;
+        }
+
+        Collider2D[] childColliders = GetComponentsInChildren<Collider2D>();
+        foreach (var col in childColliders)
+        {
+            col.enabled = false;
+        }
+
+        animator.Play("Die"); // (Thay "Die" bằng tên animation chết của bạn)
+
+        // Ẩn thanh máu khi chết
+        if (healthBarFill != null)
+        {
+            // Tìm và tắt GameObject cha của thanh máu (thường là Canvas)
+            healthBarFill.transform.parent.gameObject.SetActive(false);
+        }
+
+        Destroy(gameObject, 2f);
+    }
+
+    /// <summary>
+    /// Hàm cập nhật thanh máu
+    /// </summary>
+    private void UpdateHealthBar()
+    {
+        if (healthBarFill != null)
+        {
+            // Tính toán tỉ lệ máu còn lại (từ 0 đến 1)
+            healthBarFill.fillAmount = currentHealth / maxHealth;
+        }
+    }
 
 
     // ----- CÁC HÀM LẬT SPRITE (GIỮ NGUYÊN) -----
@@ -117,7 +216,6 @@ public class EnemyController : MonoBehaviour
         transform.localScale = newScale;
     }
     // ------------------------------------------
-
 
     // ======================
     // Gizmos hiển thị vùng
