@@ -1,0 +1,27 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
+  m_Name: Beach6
+  m_EditorClassIdentifier: 
+  m_AnimatedSprites:
+  - {fileID: -2025464692, guid: 7ce30d896d2d63348a6d3b91dca967ee, type: 3}
+  - {fileID: -535477815, guid: 7ce30d896d2d63348a6d3b91dca967ee, type: 3}
+  - {fileID: 1480005986, guid: 7ce30d896d2d63348a6d3b91dca967ee, type: 3}
+  - {fileID: -400114140, guid: 7ce30d896d2d63348a6d3b91dca967ee, type: 3}
+  - {fileID: -1460936416, guid: 7ce30d896d2d63348a6d3b91dca967ee, type: 3}
+  - {fileID: 1779782712, guid: 7ce30d896d2d63348a6d3b91dca967ee, type: 3}
+  m_MinSpeed: 6
+  m_MaxSpeed: 6
+  m_AnimationStartTime: 0
+  m_AnimationStartFrame: 0
+  m_TileColliderType: 0
+  m_TileAnimationFlags: 0
