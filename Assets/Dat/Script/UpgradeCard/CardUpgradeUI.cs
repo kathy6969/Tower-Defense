@@ -22,7 +22,7 @@ public class CardUpgradeUI : MonoBehaviour
     public Ease easeType = Ease.OutSine;
 
     [Header("Else Settings")]
-    public TowerShooter towerShooter;
+    public GameObject Tower;
     public UpgradeCardManager upgradeCardManager;
     private bool isTransitioning = false;
     private List<GameObject> activeCards = new List<GameObject>();
@@ -103,7 +103,7 @@ public class CardUpgradeUI : MonoBehaviour
             activeCards.Add(cardObj);
 
             CardSelec cardSelec = cardObj.GetComponent<CardSelec>();
-            cardSelec.Setup(card, towerShooter);
+            cardSelec.Setup(card, Tower);
 
             cardObj.transform.Find("UpgradeName").GetComponent<TextMeshProUGUI>().text = card.UpgradeName;
             cardObj.transform.Find("UpgradeLever").GetComponent<TextMeshProUGUI>().text = "LV." + card.UpgradeLevel;

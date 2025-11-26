@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Fire_Spirit_5
+  m_EditorClassIdentifier: 
+  parentID: UCFS
+  ID: UCFS5
+  UpgradeName: "H\u1ECFa tinh linh"
+  UpgradeDescription: "T\u0103ng 100% t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng , t\u1ED1c
+    \u0111\u1ED9 \u0111\u1EA1n , s\xE1t th\u01B0\u01A1ng."
+  UpgradeImage: {fileID: -8496419234733875833, guid: 82f9a53eeec46af458a4a420971a5375, type: 3}
+  UpgradeLevel: 5
+  previousLevel: {fileID: 11400000, guid: c27bb2c0ec253434d840341d6b2514d0, type: 2}
+  upgradeCardType: 2
+  summonType: 0
+  spiritType: 3
+  targetStat: 0
+  statValue: 0
+  isMultiplier: 0
+  extraBulletPrefab: {fileID: 0}
+  MinionPrefab: {fileID: 1107497383291827846, guid: edc21e49607594849897033cde669462, type: 3}
+  replaceMainBullet: 0

@@ -10,19 +10,22 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: Upgrade_Wood_Spirit 1
+  m_Name: Upgrade_Earth_Spirit_3
   m_EditorClassIdentifier: 
-  UpgradeID: UCWS2
-  UpgradeName: "M\u1ED9c tinh linh"
-  UpgradeDescription: "Tri\u1EC7u h\u1ED3i m\u1ED9t m\u1ED9c tinh linh \u0111\u1EC3
-    h\u1ED7 tr\u1EE3 b\u1EA1n."
-  UpgradeImage: {fileID: -8576890578096270759, guid: 15e658ed4a54d054297b9050778182d8, type: 3}
-  UpgradeLevel: 2
-  previousLevel: {fileID: 11400000, guid: 0b1dca98c670771488ff7e9c8dbe54c8, type: 2}
+  parentID: UCES
+  ID: UCES3
+  UpgradeName: "Th\u1ED5 tinh linh"
+  UpgradeDescription: "T\u0103ng 50% t\u1ED1c \u0111\u1ED9 \u0111\u1EA1n."
+  UpgradeImage: {fileID: -8433642104736699990, guid: 0653753ca1f4e2d49a6c61b2c12a2a87, type: 3}
+  UpgradeLevel: 3
+  previousLevel: {fileID: 11400000, guid: 9d0cdd2e846fd6046a13f9fb2959cfc4, type: 2}
   upgradeCardType: 2
+  summonType: 0
+  spiritType: 4
+  SpiritsPrefab: {fileID: 0}
+  DragonMinionPrefab: {fileID: 0}
   targetStat: 0
   statValue: 0
   isMultiplier: 0
   extraBulletPrefab: {fileID: 0}
-  MinionPrefab: {fileID: 1589881234687360884, guid: 3e4ba2f7c5f38544eb18a70579a91c6f, type: 3}
   replaceMainBullet: 0

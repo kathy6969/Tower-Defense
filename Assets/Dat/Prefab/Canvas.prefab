@@ -651,6 +651,7 @@ GameObject:
   - component: {fileID: 6903955039169957861}
   - component: {fileID: 3952321183405711777}
   - component: {fileID: 6554009245251461512}
+  - component: {fileID: 8911689993138482563}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -758,20 +759,9 @@ MonoBehaviour:
   CardUpgradePanel: {fileID: 2203813131296407989}
   cardContainer: {fileID: 2570563325190645824}
   cardPrefab: {fileID: 1018720340919836043, guid: 4c8b8564b2df5ff4ab40b8c1e811481f, type: 3}
-  availableCards:
-  - {fileID: 11400000, guid: acadd0bd2cc86f940bc5817404b51853, type: 2}
-  - {fileID: 11400000, guid: ed9574794af551e4ca5cad09bc5ccffa, type: 2}
-  - {fileID: 11400000, guid: eacadfb99d2325840a4d87c357f62d98, type: 2}
-  - {fileID: 11400000, guid: 1e2d41987dd493447a1f5e4a6366d825, type: 2}
-  - {fileID: 11400000, guid: c8ed6f8af947d2f4a9011431a9c4ce17, type: 2}
-  - {fileID: 11400000, guid: 678438c16a20e094b8502fa840c5dc8d, type: 2}
-  - {fileID: 11400000, guid: 1e3f671e0b9a0d64eb1266717b305973, type: 2}
-  - {fileID: 11400000, guid: 149ba1bea57912a4ebf489c49b2fac8e, type: 2}
-  - {fileID: 11400000, guid: 606853765edc1844fae2bf1eaf26d32a, type: 2}
-  - {fileID: 11400000, guid: b0b9ca57e75b8354eb0fd95e9d530d44, type: 2}
-  - {fileID: 11400000, guid: 0b1dca98c670771488ff7e9c8dbe54c8, type: 2}
+  cardDatabase: {fileID: 11400000, guid: 847d427730eef0d49b8f5eaf841f3547, type: 2}
   easeType: 3
-  towerShooter: {fileID: 0}
+  Tower: {fileID: 0}
   upgradeCardManager: {fileID: 6554009245251461512}
   rerollButton: {fileID: 3683010774024627062}
 --- !u!114 &6554009245251461512
@@ -788,6 +778,18 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   database: {fileID: 11400000, guid: 847d427730eef0d49b8f5eaf841f3547, type: 2}
   ownedCardIDs: []
+--- !u!114 &8911689993138482563
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4230119051212926018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 01abb541ad2e8034e81eae497880c065, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5380923632997638944
 GameObject:
   m_ObjectHideFlags: 0

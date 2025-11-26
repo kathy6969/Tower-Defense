@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Dragon_Minion_3 1
+  m_EditorClassIdentifier: 
+  parentID: UCDM
+  ID: UCDM4
+  UpgradeName: "R\u1ED3ng b\u1EE5i sao."
+  UpgradeDescription: "T\u0103ng 10% t\u1ED1c \u0111\u1ED9 di chuy\u1EC3n."
+  UpgradeImage: {fileID: -4124183897939852536, guid: 3639f6d86ef045b42ad930083f0e43f6, type: 3}
+  UpgradeLevel: 4
+  previousLevel: {fileID: 11400000, guid: 99459ed6b6175e8409149656c7cc4ee2, type: 2}
+  upgradeCardType: 2
+  summonType: 1
+  spiritType: 0
+  SpiritsPrefab: {fileID: 0}
+  DragonMinionPrefab: {fileID: 0}
+  targetStat: 0
+  statValue: 0
+  isMultiplier: 0
+  extraBulletPrefab: {fileID: 0}
+  replaceMainBullet: 0

@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
   m_Name: Upgrade_Fire_Spirit_2
   m_EditorClassIdentifier: 
-  UpgradeID: UCFS2
+  parentID: UCFS
+  ID: UCFS2
   UpgradeName: "H\u1ECFa tinh linh"
-  UpgradeDescription: "Tri\u1EC7u h\u1ED3i m\u1ED9t h\u1ECFa tinh linh \u0111\u1EC3
-    h\u1ED7 tr\u1EE3 b\u1EA1n."
+  UpgradeDescription: "T\u0103ng 50% t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng."
   UpgradeImage: {fileID: -8496419234733875833, guid: 82f9a53eeec46af458a4a420971a5375, type: 3}
   UpgradeLevel: 2
   previousLevel: {fileID: 11400000, guid: 1e2d41987dd493447a1f5e4a6366d825, type: 2}
   upgradeCardType: 2
+  summonType: 0
+  spiritType: 3
+  SpiritsPrefab: {fileID: 0}
+  DragonMinionPrefab: {fileID: 0}
   targetStat: 0
   statValue: 0
   isMultiplier: 0
   extraBulletPrefab: {fileID: 0}
-  MinionPrefab: {fileID: 1107497383291827846, guid: edc21e49607594849897033cde669462, type: 3}
   replaceMainBullet: 0

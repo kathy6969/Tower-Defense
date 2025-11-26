@@ -8,6 +8,8 @@ public class SpiritsParent : MonoBehaviour
     public float rotationSpeed = 100f; // độ/giây
     public bool autoUpdateChildren = true;
 
+    [Header("Sprits Script Reference")]
+    public Spitits[] spititsScript;
     private List<Transform> orbitObjects = new List<Transform>();
     private float currentAngle = 0f;
 
@@ -77,5 +79,34 @@ public class SpiritsParent : MonoBehaviour
     {
         Gizmos.color = Color.yellow;
         Gizmos.DrawWireSphere(transform.position, orbitRadius);
+    }
+    void findSpititsScript()
+    {
+        for (int i = 0; i < transform.childCount; i++)
+        {
+            spititsScript[i] = transform.GetChild(i).GetComponent<Spitits>();
+        }
+    }
+    // Nâng cấp chỉ số của Spirits dựa vào SpiritType
+    public void UpgradeSpiritStats(Spitits.SpiritType spiritType, float attackRateBoost, float bulletSpeedBoost , float damageBoost)
+    {
+        foreach (Transform child in orbitObjects)
+        {
+            if (child == null) continue;
+
+            Spitits spirit = child.GetComponent<Spitits>();
+            if (spirit == null) continue;
+
+            // Kiểm tra nếu loại spirit khớp với yêu cầu
+            if (spirit.spiritType == spiritType)
+            {
+                // Tăng attackRate
+                spirit.attackRate *= (1f + attackRateBoost);
+                // Tăng bulletSpeed
+                spirit.bulletSpeed *= (1f+ bulletSpeedBoost);
+                // Tăng damage
+                spirit.damage *= (1f + damageBoost);
+            }
+        }
     }
 }

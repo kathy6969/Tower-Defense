@@ -10,17 +10,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: Upgrade_Fire_Rate_2
+  m_Name: Upgrade_Range_5
   m_EditorClassIdentifier: 
-  UpgradeID: UCFR2
-  UpgradeName: "\u0110\xE1nh nhanh th\u1EAFng nhanh"
-  UpgradeDescription: "T\u0103ng t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng"
+  parentID: UCR
+  ID: UCR5
+  UpgradeName: "Nh\xECn xa tr\xF4ng r\u1ED9ng"
+  UpgradeDescription: "T\u0103ng 20% t\u1EA7m \u0111\xE1nh."
   UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
-  UpgradeLevel: 2
-  previousLevel: {fileID: 11400000, guid: ed9574794af551e4ca5cad09bc5ccffa, type: 2}
+  UpgradeLevel: 5
+  previousLevel: {fileID: 11400000, guid: 1a0c2f1bd45fa5e4292e9232bbc41c08, type: 2}
   upgradeCardType: 0
-  targetStat: 1
-  statValue: 1
+  summonType: 0
+  spiritType: 0
+  targetStat: 0
+  statValue: 2
   isMultiplier: 0
   extraBulletPrefab: {fileID: 0}
   MinionPrefab: {fileID: 0}

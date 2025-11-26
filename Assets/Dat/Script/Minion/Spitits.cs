@@ -10,8 +10,8 @@ public class Spitits : MonoBehaviour
     public GameObject bulletPrefab;
     public float attackRate = 1f;
     public float bulletSpeed = 10f;
-    public float bulletLifetime = 3f;
-
+    public float damage = 10f;
+    private float bulletLifetime = 3f;
     private float attackCountdown;
     private SpriteRenderer spriteRenderer;
     private Vector3 lastPosition;
@@ -61,10 +61,13 @@ public class Spitits : MonoBehaviour
             if (target == null) continue;
 
             GameObject bulletGO = Instantiate(bulletPrefab, transform.position, Quaternion.identity);
-
+            TPDamage bullet = bulletGO.GetComponent<TPDamage>();
+            if (bullet != null)
+            {
+                bullet.damageAmount = (int)damage;
+            }   
             Vector3 direction = (target.position - transform.position).normalized;
             Rigidbody2D rb = bulletGO.GetComponent<Rigidbody2D>();
-
             if (rb != null)
                 rb.linearVelocity = direction * bulletSpeed;
             else

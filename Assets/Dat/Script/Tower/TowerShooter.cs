@@ -14,7 +14,7 @@ public class TowerShooter : MonoBehaviour
     public Transform MinionSlot; // Vị trí để triệu hồi tháp phụ
 
     private float fireCountdown = 0f;
-    [HideInInspector]public List<Transform> currentTargets = new List<Transform>();
+    public List<Transform> currentTargets = new List<Transform>();
     private List<GameObject> extraWeapons = new List<GameObject>();
 
     void Start()

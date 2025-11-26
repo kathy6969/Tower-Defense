@@ -12,17 +12,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
   m_Name: Upgrade_Metal_Spirit_2
   m_EditorClassIdentifier: 
-  UpgradeID: UCMS2
+  parentID: UCMS
+  ID: UCMS2
   UpgradeName: Kim tinh linh
-  UpgradeDescription: "Tri\u1EC7u h\u1ED3i m\u1ED9t kim tinh linh \u0111\u1EC3 h\u1ED7
-    tr\u1EE3 b\u1EA1n."
+  UpgradeDescription: "T\u0103ng 50% t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng."
   UpgradeImage: {fileID: 7061351703277573527, guid: b62c3ba543a4da64eaa7c0be2fe82454, type: 3}
   UpgradeLevel: 2
   previousLevel: {fileID: 11400000, guid: c8ed6f8af947d2f4a9011431a9c4ce17, type: 2}
   upgradeCardType: 2
+  summonType: 0
+  spiritType: 0
+  SpiritsPrefab: {fileID: 0}
+  DragonMinionPrefab: {fileID: 0}
   targetStat: 0
   statValue: 0
   isMultiplier: 0
   extraBulletPrefab: {fileID: 0}
-  MinionPrefab: {fileID: 2517858908627650802, guid: 3017c89e4589c684ca86c9c205d7836c, type: 3}
   replaceMainBullet: 0

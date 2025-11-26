@@ -29,19 +29,19 @@ public class UpgradeCardDatabase : ScriptableObject
                 continue;
             }
 
-            if (string.IsNullOrEmpty(card.UpgradeID))
+            if (string.IsNullOrEmpty(card.ID))
             {
-                Debug.LogError($"Thẻ '{card.UpgradeName}' chưa có UpgradeID!");
+                Debug.LogError($"Thẻ '{card.UpgradeName}' chưa có ID!");
                 continue;
             }
 
-            if (_lookup.ContainsKey(card.UpgradeID))
+            if (_lookup.ContainsKey(card.ID))
             {
-                Debug.LogWarning($"Trùng ID: {card.UpgradeID} trong UpgradeCardDatabase");
+                Debug.LogWarning($"Trùng ID: {card.ID} trong UpgradeCardDatabase");
                 continue;
             }
 
-            _lookup.Add(card.UpgradeID, card);
+            _lookup.Add(card.ID, card);
         }
     }
 

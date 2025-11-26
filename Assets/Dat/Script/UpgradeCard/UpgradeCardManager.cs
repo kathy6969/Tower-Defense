@@ -8,23 +8,23 @@ public class UpgradeCardManager : MonoBehaviour
 
     public void AddUpgrade(UpgradeCard card)
     {
-        if (!ownedCardIDs.Contains(card.UpgradeID))
-            ownedCardIDs.Add(card.UpgradeID);
+        if (!ownedCardIDs.Contains(card.ID))
+            ownedCardIDs.Add(card.ID);
     }
 
-    public void ApplyAllUpgrades(TowerShooter tower)
-    {
-        foreach (var id in ownedCardIDs)
-        {
-            var card = database.GetByID(id);
-            if (card != null)
-                card.ApplyUpgrade(tower);
-        }
-    }
+    // public void ApplyAllUpgrades(TowerShooter tower)
+    // {
+    //     foreach (var id in ownedCardIDs)
+    //     {
+    //         var card = database.GetByID(id);
+    //         if (card != null)
+    //             card.ApplyUpgrade(tower);
+    //     }
+    // }
     
     public bool HasUpgrade(UpgradeCard card)
     {
-        return ownedCardIDs.Contains(card.UpgradeID);
+        return ownedCardIDs.Contains(card.ID);
     }
 
 

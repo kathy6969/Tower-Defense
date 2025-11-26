@@ -73,7 +73,7 @@ GameObject:
   - component: {fileID: 5081717101333533239}
   - component: {fileID: 1290528891637568650}
   m_Layer: 0
-  m_Name: MinionSlot
+  m_Name: SpiritsSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -109,6 +109,51 @@ MonoBehaviour:
   orbitRadius: 2
   rotationSpeed: 100
   autoUpdateChildren: 0
+  spititsScript: []
+--- !u!1 &8983133668026740411
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 7953636418391966528}
+  - component: {fileID: 2718177837773504631}
+  m_Layer: 0
+  m_Name: DragonMinion
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &7953636418391966528
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983133668026740411}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 2275956104348075115}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2718177837773504631
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8983133668026740411}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14988598cd6cc264e977ec23ef07574c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &9067508383615230017
 GameObject:
   m_ObjectHideFlags: 0
@@ -144,8 +189,9 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5081717101333533239}
   - {fileID: 3795442827494407975}
+  - {fileID: 5081717101333533239}
+  - {fileID: 7953636418391966528}
   - {fileID: 8439546414178575091}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}

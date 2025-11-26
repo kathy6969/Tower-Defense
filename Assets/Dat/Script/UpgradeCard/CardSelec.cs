@@ -3,33 +3,74 @@ using UnityEngine;
 public class CardSelec : MonoBehaviour
 {
     public CardUpgradeUI cardUpgradeUI;
+    public UpgradeApplier upgradeApplier;
     [HideInInspector] public UpgradeCard upgradeCard;
-    [HideInInspector] public TowerShooter towerShooter;
+    [HideInInspector] public GameObject Tower;
     [HideInInspector] public UpgradeCardManager upgradeCardManager;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    
     void Start()
     {
         cardUpgradeUI = GetComponentInParent<CardUpgradeUI>();
-        towerShooter = FindAnyObjectByType<TowerShooter>();
         upgradeCardManager = GetComponentInParent<UpgradeCardManager>();
+        upgradeApplier = GetComponentInParent<UpgradeApplier>();
     }
+    
     public void OnClick()
     {
-        if (upgradeCard == null || towerShooter == null)
+        // Kiểm tra các tham số chính
+        if (upgradeCard == null)
         {
-            Debug.LogWarning("UpgradeCardButton chưa được setup đúng!");
+            Debug.LogWarning("UpgradeCard chưa được setup!");
             return;
         }
-        // Gọi upgrade
-        upgradeCard.ApplyUpgrade(towerShooter);
+        
+        if (Tower == null)
+        {
+            Debug.LogWarning("Tower chưa được setup!");
+            return;
+        }
+        
+        // Kiểm tra từng component
+        if (cardUpgradeUI == null)
+        {
+            cardUpgradeUI = GetComponentInParent<CardUpgradeUI>();
+            if (cardUpgradeUI == null)
+            {
+                Debug.LogWarning("cardUpgradeUI không tìm thấy!");
+                return;
+            }
+        }
+        
+        if (upgradeCardManager == null)
+        {
+            upgradeCardManager = GetComponentInParent<UpgradeCardManager>();
+            if (upgradeCardManager == null)
+            {
+                Debug.LogWarning("upgradeCardManager không tìm thấy!");
+                return;
+            }
+        }
+        
+        if (upgradeApplier == null)
+        {
+            upgradeApplier = GetComponentInParent<UpgradeApplier>();
+            if (upgradeApplier == null)
+            {
+                Debug.LogWarning("upgradeApplier không tìm thấy!");
+                return;
+            }
+        }
+        
+        // Áp dụng nâng cấp
+        upgradeApplier.Setup(upgradeCard, Tower);
+        upgradeApplier.ApplyUpgrade(upgradeCard, Tower);
         upgradeCardManager.AddUpgrade(upgradeCard);
-        // Ẩn UI nâng cấp thẻ
         cardUpgradeUI.HideCardUpgradePanel();
     }
-    // Hàm setup khi spawn thẻ
-    public void Setup(UpgradeCard card, TowerShooter tower)
+    
+    public void Setup(UpgradeCard card, GameObject tower)
     {
         upgradeCard = card;
-        towerShooter = tower;
+        Tower = tower;
     }
 }

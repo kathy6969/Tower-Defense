@@ -57,6 +57,11 @@ public class EnemyHP : MonoBehaviour
         yield return new WaitForSeconds(InvincibilityTime);
         isInvincible = false;
     }
+    private void HealFull()
+    {
+        currentHP = maxHP;
+        UpdateHealthBar();
+    }
     public void Die()
     {
         //Debug.Log("Enemy died");
@@ -64,6 +69,7 @@ public class EnemyHP : MonoBehaviour
         if (childActivator != null)
         {
             childActivator.EnableRandomChildren(1, 2);
+            HealFull();
         }
     }
 }

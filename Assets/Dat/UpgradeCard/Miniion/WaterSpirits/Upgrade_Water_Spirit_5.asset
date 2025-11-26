@@ -10,16 +10,19 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: Upgrade_Water_Spirit 1
+  m_Name: Upgrade_Water_Spirit_5
   m_EditorClassIdentifier: 
-  UpgradeID: UCWS2
+  parentID: UCWS
+  ID: UCWS5
   UpgradeName: "Th\u1EE7y tinh linh"
-  UpgradeDescription: "Tri\u1EC7u h\u1ED3i m\u1ED9t th\u1EE7y tinh linh \u0111\u1EC3
-    h\u1ED7 tr\u1EE3 b\u1EA1n."
+  UpgradeDescription: "T\u0103ng 100% t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng , t\u1ED1c
+    \u0111\u1ED9 \u0111\u1EA1n , s\xE1t th\u01B0\u01A1ng."
   UpgradeImage: {fileID: 4164213114258598589, guid: e1210dd2dbddac4418d5326c409f18ba, type: 3}
-  UpgradeLevel: 2
-  previousLevel: {fileID: 11400000, guid: b0b9ca57e75b8354eb0fd95e9d530d44, type: 2}
+  UpgradeLevel: 5
+  previousLevel: {fileID: 11400000, guid: bdb98ccf6442ac942b29f43cd2e00624, type: 2}
   upgradeCardType: 2
+  summonType: 0
+  spiritType: 2
   targetStat: 0
   statValue: 0
   isMultiplier: 0
