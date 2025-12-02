@@ -20,22 +20,11 @@ public class UpgradeCard : ScriptableObject
     [Header("Summon Settings")]
     public SummonType summonType;
     public Spitits.SpiritType spiritType; // nếu là summon spirits
-    public GameObject SpiritsPrefab;
-    public GameObject DragonMinionPrefab;
+    public GameObject SummonPrefab;
     [Header("Stat Upgrade Settings")]
     public TowerStatType targetStat;   // ví dụ: Range, FireRate, MaxTargets
     public float statValue;            // giá trị thay đổi (cộng thêm hoặc nhân)
     public bool isMultiplier = false;  // nếu true thì nhân, nếu false thì cộng
-
-    [Header("Weapon / Bullet Settings")]
-    public GameObject extraBulletPrefab; // thêm loại đạn phụ mới
-    
-    public bool replaceMainBullet = false;
-
-    public void lalal()
-    {
-        
-    }
 }
 public enum UpgradeCardType
 {
@@ -53,5 +42,6 @@ public enum TowerStatType
 public enum SummonType
 {
     Spirits,
-    DragonMinion
+    DragonMinion,
+    ElectricOrb
 }

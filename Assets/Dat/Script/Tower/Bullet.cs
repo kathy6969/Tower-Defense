@@ -6,7 +6,7 @@ public class Bullet : MonoBehaviour
     public float speed = 10f;              // Tốc độ di chuyển
     public AnimationCurve heightCurve;     // Độ cong đường bay
     public float maxHeight = 1.5f;         // Độ cao tối đa
-
+    public bool DestroyOnHit = true;
     private Transform target;
     private Vector3 startPos;
     private Vector3 targetPos;
@@ -52,6 +52,11 @@ public class Bullet : MonoBehaviour
         // Tính góc xoay (không trừ 90 độ nữa)
         float angle = Mathf.Atan2(direction.y, direction.x) * Mathf.Rad2Deg;
         transform.rotation = Quaternion.Euler(0f, 0f, angle);
+        // Nếu đến đích thì hủy đạn
+        if (DestroyOnHit && travelPercent >= 1f)
+        {
+            Destroy(gameObject);
+        }
     }
 
 }

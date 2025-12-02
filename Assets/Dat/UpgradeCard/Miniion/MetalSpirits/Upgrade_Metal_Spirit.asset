@@ -23,10 +23,7 @@ MonoBehaviour:
   upgradeCardType: 2
   summonType: 0
   spiritType: 0
-  SpiritsPrefab: {fileID: 2517858908627650802, guid: 3017c89e4589c684ca86c9c205d7836c, type: 3}
-  DragonMinionPrefab: {fileID: 0}
+  SummonPrefab: {fileID: 2517858908627650802, guid: 3017c89e4589c684ca86c9c205d7836c, type: 3}
   targetStat: 0
   statValue: 0
   isMultiplier: 0
-  extraBulletPrefab: {fileID: 0}
-  replaceMainBullet: 0

@@ -23,9 +23,7 @@ MonoBehaviour:
   upgradeCardType: 2
   summonType: 0
   spiritType: 4
+  SummonPrefab: {fileID: 1659165838063822919, guid: af70fec448f4575479279ac957a1c453, type: 3}
   targetStat: 0
   statValue: 0
   isMultiplier: 0
-  extraBulletPrefab: {fileID: 0}
-  MinionPrefab: {fileID: 1659165838063822919, guid: af70fec448f4575479279ac957a1c453, type: 3}
-  replaceMainBullet: 0

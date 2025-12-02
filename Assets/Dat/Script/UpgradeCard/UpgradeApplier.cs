@@ -66,7 +66,7 @@ public class UpgradeApplier : MonoBehaviour
                 SpiritsParent spiritsParent = tower.GetComponentInChildren<SpiritsParent>();
                 if (spiritsParent == null)
                 {
-                    UnityEngine.Debug.LogWarning("Tower không có component SpiritsParent!");
+                    Debug.LogWarning("Tower không có component SpiritsParent!");
                     return;
                 }
                 if (card.UpgradeLevel == 1)
@@ -125,6 +125,44 @@ public class UpgradeApplier : MonoBehaviour
                     dragonMinionParent.upgradeDragonMinionSpeed(2f);
                 }
                 break;
+            case SummonType.ElectricOrb:
+                if (card.UpgradeLevel == 1)
+                {
+                    SummonElectricOrb(card, tower);
+                }
+                else if (card.UpgradeLevel == 2)
+                {
+                    ElectricOrb electricOrb = tower.GetComponentInChildren<ElectricOrb>();
+                    if (electricOrb != null)
+                    {
+                        electricOrb.IncreaseOrbCount(2);
+                    }
+                }
+                else if (card.UpgradeLevel == 3)
+                {
+                    ElectricOrb electricOrb = tower.GetComponentInChildren<ElectricOrb>();
+                    if (electricOrb != null)
+                    {
+                        electricOrb.IncreaseRotationSpeed(20f);
+                    }
+                }
+                else if (card.UpgradeLevel == 4)
+                {
+                    ElectricOrb electricOrb = tower.GetComponentInChildren<ElectricOrb>();
+                    if (electricOrb != null)
+                    {
+                        electricOrb.IncreaseOrbCount(3);
+                    }
+                }
+                else if (card.UpgradeLevel == 5)
+                {
+                    ElectricOrb electricOrb = tower.GetComponentInChildren<ElectricOrb>();
+                    if (electricOrb != null)
+                    {
+                        electricOrb.SpawnReverseOrbs();
+                    }
+                }
+                break;
             default:
                 Debug.LogWarning("Loại triệu hồi không xác định!");
                 break;
@@ -136,13 +174,18 @@ public class UpgradeApplier : MonoBehaviour
         Transform spiritsSlot = tower.transform.Find("SpiritsSlot");
         if (spiritsSlot == null)
         {
-            UnityEngine.Debug.LogWarning("MinionSlot không tìm thấy trong Tower!");
+            Debug.LogWarning("MinionSlot không tìm thấy trong Tower!");
             return;
         }
-
         // Sinh ra prefab và đặt làm con của MinionSlot
-        GameObject spirits = Instantiate(card.SpiritsPrefab, spiritsSlot.position, Quaternion.identity, spiritsSlot);
+        GameObject spirits = Instantiate(card.SummonPrefab, spiritsSlot.position, Quaternion.identity, spiritsSlot);
         Debug.Log("Minion được sinh ra tại: " + spirits.name);
+    }
+    private void SummonElectricOrb(UpgradeCard card, GameObject tower)
+    {
+        GameObject electricOrb = Instantiate(card.SummonPrefab, tower.transform.position, Quaternion.identity, tower.transform);
+        transform.parent = tower.transform;
+        Debug.Log("Electric Orb được sinh ra tại: " + electricOrb.name);
     }
     public void Setup(UpgradeCard card, GameObject tower)
     {

@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Card_Electric_Orb_2
+  m_EditorClassIdentifier: 
+  parentID: UCEB
+  ID: UCEB2
+  UpgradeName: "C\u1EA7u \u0111i\u1EC7n"
+  UpgradeDescription: "Tri\u1EC7u h\u1ED3i th\xEAm 2 c\u1EA7u \u0111i\u1EC7n."
+  UpgradeImage: {fileID: 8594059989498245877, guid: ee42d779f200035499151658a5ff94d0, type: 3}
+  UpgradeLevel: 2
+  previousLevel: {fileID: 11400000, guid: c6472ea966903664f8fdc08d0ab7c09a, type: 2}
+  upgradeCardType: 2
+  summonType: 2
+  spiritType: 0
+  SummonPrefab: {fileID: 6850454614482417669, guid: 813c8a4cf3094f9459ad215526057673, type: 3}
+  targetStat: 0
+  statValue: 0
+  isMultiplier: 0

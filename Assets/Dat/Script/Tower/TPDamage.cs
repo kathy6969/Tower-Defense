@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class TPDamage : MonoBehaviour
 {
+    public bool DestroyOnHit = true;
     public int damageAmount;
     void OnTriggerEnter2D(Collider2D collision)
     {
@@ -11,7 +12,10 @@ public class TPDamage : MonoBehaviour
             if (enemyHP != null)
             {
                 enemyHP.TakeDamage(damageAmount); // Deal 10 damage to the enemy
-                Destroy(gameObject); // Destroy the bullet after hitting the enemy
+                if (DestroyOnHit)
+                {
+                    Destroy(gameObject); // Destroy the projectile after hitting an enemy
+                }
             }
         }
     }
