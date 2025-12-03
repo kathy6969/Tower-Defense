@@ -15,7 +15,8 @@ public class UpgradeApplier : MonoBehaviour
             case UpgradeCardType.Stat:
                 ApplyStatUpgrade(upgradeCard, Tower);
                 break;
-            case UpgradeCardType.Weapon:
+            case UpgradeCardType.ExtraWeapon:
+                ApplyExtraWeaponUpgrade(upgradeCard, Tower);
                 break;
             case UpgradeCardType.Summon:
                 ApplySummonUpgrade(upgradeCard, Tower);
@@ -168,6 +169,63 @@ public class UpgradeApplier : MonoBehaviour
                 break;
         }
     }
+    private void ApplyExtraWeaponUpgrade(UpgradeCard card, GameObject tower)
+    {
+        switch (card.extraWeaponType)
+        {
+            case ExtraWeaponType.MinecraftTNT:
+                // Thêm vũ khí phụ Minecraft TNT
+                if (upgradeCard.UpgradeLevel == 1)
+                {
+                    SummonMinecraftTNT(card, tower);
+                }else if (upgradeCard.UpgradeLevel == 2)
+                {
+                    // Giảm thời gian coldDown ném TNT
+                    MinecraftTNT minecraftTNT = tower.GetComponentInChildren<MinecraftTNT>();
+                    if (minecraftTNT != null)
+                    {
+                        minecraftTNT.throwCooldown *= 0.9f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 3)
+                {
+                    // Tăng số lượng TNT mỗi lần ném
+                    MinecraftTNT minecraftTNT = tower.GetComponentInChildren<MinecraftTNT>();
+                    if (minecraftTNT != null)
+                    {
+                        minecraftTNT.tntCountPerThrow += 1;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 4)
+                {
+                    // giảm thời gian coldDown ném TNT
+                    MinecraftTNT minecraftTNT = tower.GetComponentInChildren<MinecraftTNT>();
+                    if (minecraftTNT != null)
+                    {
+                        minecraftTNT.throwCooldown *= 0.8f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 5)
+                {
+                    // tăng số lượng TNT mỗi lần ném
+                    MinecraftTNT minecraftTNT = tower.GetComponentInChildren<MinecraftTNT>();
+                    if (minecraftTNT != null)
+                    {
+                        minecraftTNT.tntCountPerThrow += 2;
+                    }
+                }
+                break;
+            case ExtraWeaponType.FireballLauncher:
+                // Thêm vũ khí phụ Fireball Launcher
+                break;
+            case ExtraWeaponType.IceShardCannon:
+                // Thêm vũ khí phụ Ice Shard Cannon
+                break;
+            default:
+                Debug.LogWarning("Loại vũ khí phụ không xác định!");
+                break;
+        }
+    }
     private void SummonSpirits(UpgradeCard card, GameObject tower)
     {
         // Tìm MinionSlot trong Tower
@@ -186,6 +244,12 @@ public class UpgradeApplier : MonoBehaviour
         GameObject electricOrb = Instantiate(card.SummonPrefab, tower.transform.position, Quaternion.identity, tower.transform);
         transform.parent = tower.transform;
         Debug.Log("Electric Orb được sinh ra tại: " + electricOrb.name);
+    }
+    private void SummonMinecraftTNT(UpgradeCard card, GameObject tower)
+    {
+        GameObject minecraftTNT = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
+        transform.parent = tower.transform;
+        Debug.Log("Minecraft TNT được sinh ra tại: " + minecraftTNT.name);
     }
     public void Setup(UpgradeCard card, GameObject tower)
     {

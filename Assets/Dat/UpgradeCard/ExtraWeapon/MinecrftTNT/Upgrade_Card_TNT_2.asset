@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Card_TNT_2
+  m_EditorClassIdentifier: 
+  parentID: UCTNT
+  ID: UCTNT2
+  UpgradeName: "Thu\u1ED1c n\u1ED5 TNT."
+  UpgradeDescription: "Gi\u1EA3m th\u1EDDi gian h\u1ED3i chi\xEAu 10%."
+  UpgradeImage: {fileID: 2130682769100211521, guid: 928e3f22805592540807906d31e44aec, type: 3}
+  UpgradeLevel: 2
+  previousLevel: {fileID: 11400000, guid: daf2e7d8b9367664b9ae8eb66311ad5b, type: 2}
+  upgradeCardType: 1
+  targetStat: 0
+  statValue: 0
+  isMultiplier: 0
+  summonType: 0
+  spiritType: 0
+  SummonPrefab: {fileID: 0}
+  extraWeaponType: 0
+  ExtraWeaponPrefab: {fileID: 1008134079336806520, guid: eb315d8902a82e346882ca640fc5aa2d, type: 3}
