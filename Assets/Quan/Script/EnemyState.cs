@@ -1,10 +1,10 @@
-using UnityEngine;
+﻿using UnityEngine;
 
 public abstract class EnemyState : MonoBehaviour
 {
     [Header("Animation")]
     public string animationName;
-    public Animator animator;
+    // ❌ ĐÃ XÓA: public Animator animator;
 
     protected EnemyController enemy;
 
@@ -12,8 +12,14 @@ public abstract class EnemyState : MonoBehaviour
     {
         this.enemy = enemy;
 
-        if (animator != null && !string.IsNullOrEmpty(animationName))
-            animator.Play(animationName);
+        // 👉 THÊM: Thiết lập tốc độ Animator về tốc độ MẶC ĐỊNH
+        // Logic này đảm bảo Idle/Move luôn dùng tốc độ chuẩn, 
+        // và reset tốc độ sau khi rời AttackState.
+        enemy.SetAnimatorSpeed(enemy.animatorSpeed);
+
+        // ✔ Dùng animator từ EnemyController (đúng mô hình FSM)
+        if (enemy.animator != null && !string.IsNullOrEmpty(animationName))
+            enemy.animator.Play(animationName);
     }
 
     public virtual void OnUpdate() { }

@@ -1,27 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-// ⚠️ SỬA 1: Đổi lớp kế thừa
-public class EnemyRangedAttackState : BaseAttackState // 👈 Đổi từ EnemyState
+// Kế thừa từ BaseAttackState là đúng
+public class EnemyRangedAttackState : BaseAttackState
 {
     [Header("Cấu hình Tầm xa")]
-    public GameObject projectilePrefab;
-    public Transform firePoint;
+    public GameObject projectilePrefab; // Prefab đạn
+    public Transform firePoint;        // Vị trí bắn
 
-    // ----- ĐÃ XÓA: attackCooldown, attackAnimationDuration, isAttacking -----
-    // (Vì chúng đã nằm trong lớp cha 'BaseAttackState')
+    // Logic OnEnter, OnUpdate, OnExit được thừa kế từ BaseAttackState/EnemyState
 
-    // ----- ĐÃ XÓA: Hàm OnUpdate() -----
-    // (Vì chúng ta dùng chung hàm OnUpdate() của lớp cha)
-
-    // ⚠️ SỬA 2: Định nghĩa hàm AttackRoutine (bắt buộc)
-    // Đây là phần logic riêng của Tầm xa
+    // Định nghĩa hàm AttackRoutine (bắt buộc)
     protected override IEnumerator AttackRoutine()
     {
         isAttacking = true;
 
-        if (animator != null && !string.IsNullOrEmpty(animationName))
-            animator.Play(animationName);
+        // ⚠️ SỬA ĐỔI 1: Truy cập Animator thông qua enemy (Controller)
+        if (enemy.animator != null && !string.IsNullOrEmpty(animationName))
+            enemy.animator.Play(animationName); // Thay vì 'animator.Play'
 
         // Chờ cho animation chạy xong
         yield return new WaitForSeconds(attackAnimationDuration);
@@ -29,6 +25,9 @@ public class EnemyRangedAttackState : BaseAttackState // 👈 Đổi từ EnemyS
         // Logic bắn đạn
         if (projectilePrefab != null && firePoint != null)
         {
+            // ⚠️ SỬA ĐỔI 2: Instantiate cần được gọi bởi một MonoBehaviour, 
+            // có thể gọi từ Controller (enemy) hoặc chính State này (this)
+            // Gọi từ Controller là hợp lý hơn.
             Instantiate(projectilePrefab, firePoint.position, firePoint.rotation);
         }
         else

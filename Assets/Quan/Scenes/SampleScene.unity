@@ -335,7 +335,7 @@ Camera:
   far clip plane: 1000
   field of view: 34
   orthographic: 1
-  orthographic size: 9.76
+  orthographic size: 13.47
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -366,6 +366,17 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &551400811 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 348536418027109454, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+  m_PrefabInstance: {fileID: 6600448326743818622}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b6d07af037bc2c4b8e8f49c1b3605d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &619394800
 GameObject:
   m_ObjectHideFlags: 0
@@ -1384,6 +1395,26 @@ PrefabInstance:
       propertyPath: m_Name
       value: Check_attack
       objectReference: {fileID: 0}
+    - target: {fileID: 348536418027109454, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: attackAnimationDuration
+      value: 0.7
+      objectReference: {fileID: 0}
+    - target: {fileID: 740476138863939102, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: attackState
+      value: 
+      objectReference: {fileID: 551400811}
+    - target: {fileID: 740476138863939102, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: attackRadius
+      value: 3.94
+      objectReference: {fileID: 0}
+    - target: {fileID: 740476138863939102, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: detectRadius
+      value: 24.3
+      objectReference: {fileID: 0}
+    - target: {fileID: 740476138863939102, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: animatorSpeed
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 856493661537217884, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1435,6 +1466,10 @@ PrefabInstance:
     - target: {fileID: 3367105966584407096, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_Name
       value: range
+      objectReference: {fileID: 0}
+    - target: {fileID: 4435066903921393442, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: minOrderInLayer
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5463962965085802882, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_Name

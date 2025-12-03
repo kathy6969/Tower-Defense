@@ -2,8 +2,8 @@
 
 public class AttackBox : MonoBehaviour
 {
-    [Header("Cha có chứa EnemyLevelUp hoặc EnemyData")]
-    public Enemy parentEnemy;
+
+ 
 
     private void OnTriggerEnter2D(Collider2D collision)
     {

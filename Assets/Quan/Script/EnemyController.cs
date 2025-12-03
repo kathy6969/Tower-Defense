@@ -8,33 +8,36 @@ public class EnemyController : MonoBehaviour
 
     [Header("Detection")]
     public LayerMask playerLayer;
-    public Transform detectRange;      // vị trí trung tâm vùng phát hiện
-    public Transform attackRange;      // vị trí trung tâm vùng tấn công
-    public float detectRadius = 5f;    // 👈 chỉnh nhanh trong Inspector
-    public float attackRadius = 2f;    // 👈 chỉnh nhanh trong Inspector
+    public Transform detectRange;
+    public Transform attackRange;
+    public float detectRadius = 5f;
+    public float attackRadius = 2f;
 
     [Header("States")]
     public EnemyIdleState idleState;
     public EnemyMoveState moveState;
+    public BaseAttackState attackState;   // Đúng yêu cầu
 
-    // ⚠️ SỬA 1: ĐÃ ĐỔI KIỂU CỦA 'attackState'
-    // Giờ nó có thể nhận BẤT KỲ state nào kế thừa từ 'BaseAttackState'
-    // (Bạn kéo EnemyAttackState hay EnemyRangedAttackState vào đây đều được)
-    public BaseAttackState attackState;
+    [Header("Animator Control")]
+    public float animatorSpeed = 1f; // 👈 BIẾN LOGIC TỐC ĐỘ MẶC ĐỊNH
 
     [Header("Flip Logic")]
     [HideInInspector] public bool isFacingRight = true;
-    // ----------------------------------
 
     [HideInInspector] public Transform targetPlayer;
     private EnemyState currentState;
 
-    // ----- 1. BIẾN ĐỂ ĐẾM COOLDOWN -----
     private float attackTimer;
-    // -------------------------------------
 
     void Start()
     {
+        // 👇 SỬA ĐỔI QUAN TRỌNG: XÓA việc chỉnh tốc độ Animator cố định khi bắt đầu.
+        // Tốc độ mặc định sẽ được quản lý bởi EnemyState.OnEnter()
+        // if (animator != null)
+        // {
+        //     animator.speed = animatorSpeed;
+        // }
+
         ChangeState(idleState);
     }
 
@@ -42,12 +45,10 @@ public class EnemyController : MonoBehaviour
     {
         currentState?.OnUpdate();
 
-        // ----- 2. LOGIC ĐẾM NGƯỢC COOLDOWN (LUÔN CHẠY) -----
         if (attackTimer > 0)
         {
             attackTimer -= Time.deltaTime;
         }
-        // --------------------------------------------------
     }
 
     public void ChangeState(EnemyState newState)
@@ -80,23 +81,28 @@ public class EnemyController : MonoBehaviour
         return targetPlayer;
     }
 
-    // ----- 3. HÀM ĐỂ STATE KIỂM TRA COOLDOWN -----
     public bool IsAttackReady()
     {
         return attackTimer <= 0;
     }
 
-    // ----- 4. HÀM ĐỂ ATTACKSTATE RESET COOLDOWN (ĐÃ SỬA) -----
-    // ⚠️ SỬA 2: Sửa hàm này để nó 'nhận' cooldown
     public void ResetAttackCooldown(float cooldown)
     {
-        // Nó nhận giá trị cooldown từ bất kỳ state nào gọi nó
         attackTimer = cooldown;
     }
-    // -------------------------------------------------
 
+    // ======================
+    // ANIMATOR SPEED CONTROL
+    // ======================
+    public void SetAnimatorSpeed(float speed)
+    {
+        if (animator != null)
+        {
+            animator.speed = speed;
+        }
+    }
 
-    // ----- CÁC HÀM LẬT SPRITE (GIỮ NGUYÊN) -----
+    // ----- Lật Sprite -----
     public void CheckAndFlip(Vector2 direction)
     {
         if (isFacingRight && direction.x < 0)
@@ -116,12 +122,8 @@ public class EnemyController : MonoBehaviour
         newScale.x *= -1;
         transform.localScale = newScale;
     }
-    // ------------------------------------------
 
-
-    // ======================
-    // Gizmos hiển thị vùng
-    // ======================
+    // ----- Gizmos -----
     void OnDrawGizmosSelected()
     {
         if (detectRange != null)
