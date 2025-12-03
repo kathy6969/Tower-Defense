@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Fire_Rate
+  m_EditorClassIdentifier: 
+  parentID: UCFR
+  ID: UCFR1
+  UpgradeName: "\u0110\xE1nh nhanh th\u1EAFng nhanh"
+  UpgradeDescription: "T\u0103ng 20% t\u1ED1c \u0111\u1ED9 t\u1EA5n c\xF4ng."
+  UpgradeImage: {fileID: -4910467378755017893, guid: 6cbd5400b2ba9f94db8e89d68d113721, type: 3}
+  UpgradeLevel: 1
+  previousLevel: {fileID: 0}
+  upgradeCardType: 0
+  summonType: 0
+  spiritType: 0
+  targetStat: 1
+  statValue: 0.2
+  isMultiplier: 0
+  extraBulletPrefab: {fileID: 0}
+  MinionPrefab: {fileID: 0}
+  replaceMainBullet: 0

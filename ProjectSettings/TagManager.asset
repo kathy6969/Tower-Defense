@@ -3,7 +3,10 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 3
-  tags: []
+  tags:
+  - Enemy
+  - Tower
+  - SpiritsMinion
   layers:
   - Default
   - TransparentFX
@@ -11,9 +14,9 @@ TagManager:
   - 
   - Water
   - UI
-  - Player
+  - Projectile
   - Enemy
-  - 
+  - Glow
   - 
   - 
   - 
@@ -41,8 +44,17 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
-  - name: Character
-    uniqueID: 4285912491
+  - name: Tower
+    uniqueID: 2770610903
+    locked: 0
+  - name: DragonTail
+    uniqueID: 1240355995
+    locked: 0
+  - name: DragonBody
+    uniqueID: 1671317639
+    locked: 0
+  - name: DragonHead
+    uniqueID: 2009640987
     locked: 0
   m_RenderingLayers:
   - Default
