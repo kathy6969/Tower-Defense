@@ -208,8 +208,8 @@ GameObject:
   m_Component:
   - component: {fileID: 360740101}
   m_Layer: 7
-  m_Name: CheckPoint
-  m_TagString: Untagged
+  m_Name: CheckBody
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1380,6 +1380,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 275377798417575220, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: m_Name
+      value: Check_attack
+      objectReference: {fileID: 0}
     - target: {fileID: 856493661537217884, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -1427,6 +1431,10 @@ PrefabInstance:
     - target: {fileID: 1791323729012000228, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3367105966584407096, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
+      propertyPath: m_Name
+      value: range
       objectReference: {fileID: 0}
     - target: {fileID: 5463962965085802882, guid: c84ac2db2035d824aadf6dd3d8a96aeb, type: 3}
       propertyPath: m_Name
