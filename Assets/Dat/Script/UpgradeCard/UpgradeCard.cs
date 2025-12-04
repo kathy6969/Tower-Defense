@@ -55,6 +55,5 @@ public enum SummonType
 public enum ExtraWeaponType
 {
     MinecraftTNT,
-    FireballLauncher,
-    IceShardCannon
+    ThrowingAxes
 }

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Card_Throwing_Axe_3
+  m_EditorClassIdentifier: 
+  parentID: UCTA
+  ID: UCTA3
+  UpgradeName: "R\xECu n\xE9m"
+  UpgradeDescription: "Gi\u1EA3m th\u1EDDi gian h\u1ED3i chi\xEAu 15%."
+  UpgradeImage: {fileID: 8970661042605636276, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
+  UpgradeLevel: 3
+  previousLevel: {fileID: 11400000, guid: 08c05d86c40cbf04a8dcb787607cdb36, type: 2}
+  upgradeCardType: 1
+  targetStat: 0
+  statValue: 0
+  isMultiplier: 0
+  summonType: 0
+  spiritType: 0
+  SummonPrefab: {fileID: 0}
+  extraWeaponType: 1
+  ExtraWeaponPrefab: {fileID: 1133221319524098398, guid: fb15c8e06fe370749952e417a4b15981, type: 3}

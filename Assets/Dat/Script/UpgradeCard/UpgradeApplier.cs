@@ -215,11 +215,42 @@ public class UpgradeApplier : MonoBehaviour
                     }
                 }
                 break;
-            case ExtraWeaponType.FireballLauncher:
-                // Thêm vũ khí phụ Fireball Launcher
-                break;
-            case ExtraWeaponType.IceShardCannon:
-                // Thêm vũ khí phụ Ice Shard Cannon
+            case ExtraWeaponType.ThrowingAxes:
+                if (upgradeCard.UpgradeLevel == 1)
+                {
+                    SummonThrowingAxes(card, tower);
+                }else if (upgradeCard.UpgradeLevel == 2)
+                {
+                    StealAxes stealAxes = tower.GetComponentInChildren<StealAxes>();
+                    if (stealAxes != null)
+                    {
+                        stealAxes.throwCooldown *= 0.9f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 3)
+                {
+                    StealAxes stealAxes = tower.GetComponentInChildren<StealAxes>();
+                    if (stealAxes != null)
+                    {
+                        stealAxes.throwCooldown *= 0.85f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 4)
+                {
+                    StealAxes stealAxes = tower.GetComponentInChildren<StealAxes>();
+                    if (stealAxes != null)
+                    {
+                        stealAxes.throwCooldown *= 0.8f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 5)
+                {
+                    StealAxes stealAxes = tower.GetComponentInChildren<StealAxes>();
+                    if (stealAxes != null)
+                    {
+                        stealAxes.throwCooldown *= 0.75f;
+                    }
+                }
                 break;
             default:
                 Debug.LogWarning("Loại vũ khí phụ không xác định!");
@@ -250,6 +281,12 @@ public class UpgradeApplier : MonoBehaviour
         GameObject minecraftTNT = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
         transform.parent = tower.transform;
         Debug.Log("Minecraft TNT được sinh ra tại: " + minecraftTNT.name);
+    }
+    private void SummonThrowingAxes(UpgradeCard card, GameObject tower)
+    {
+        GameObject throwingAxes = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
+        transform.parent = tower.transform;
+        Debug.Log("Throwing Axes được sinh ra tại: " + throwingAxes.name);
     }
     public void Setup(UpgradeCard card, GameObject tower)
     {

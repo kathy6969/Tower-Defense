@@ -41,7 +41,6 @@ public class Spitits : MonoBehaviour
         }
 
         lastPosition = transform.position;
-
         // Tấn công
         attackCountdown -= Time.deltaTime;
         if (attackCountdown <= 0f)

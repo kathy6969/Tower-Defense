@@ -15,8 +15,6 @@ public class TowerShooter : MonoBehaviour
 
     private float fireCountdown = 0f;
     public List<Transform> currentTargets = new List<Transform>();
-    private List<GameObject> extraWeapons = new List<GameObject>();
-
     void Start()
     {
         // Remove InvokeRepeating since we'll update before each shot
@@ -72,24 +70,8 @@ public class TowerShooter : MonoBehaviour
             Bullet bullet = bulletGO.GetComponent<Bullet>();
             if (bullet != null)
                 bullet.Launch(target);
-
-            // Bắn thêm vũ khí phụ (nếu có)
-            foreach (var extra in extraWeapons)
-            {
-                GameObject bulletExtra = Instantiate(extra, firePoint.position, firePoint.rotation);
-                Bullet bulletExtraComp = bulletExtra.GetComponent<Bullet>();
-                if (bulletExtraComp != null)
-                    bulletExtraComp.Launch(target);
-            }
         }
     }
-
-    public void AddExtraWeapon(GameObject newBulletPrefab)
-    {
-        if (!extraWeapons.Contains(newBulletPrefab))
-            extraWeapons.Add(newBulletPrefab);
-    }
-
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;

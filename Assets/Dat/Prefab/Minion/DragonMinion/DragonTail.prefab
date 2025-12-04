@@ -114,7 +114,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   head: {fileID: 0}
   segmentIndex: 0
-  followDistance: 1
+  followDistance: 0.5
   waveStrength: 0.1
   waveSpeed: 1
 --- !u!114 &1086665324367638080
