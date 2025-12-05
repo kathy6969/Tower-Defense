@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: Upgrade_Card_Throwing_Axe
+  m_Name: Upgrade_Card_Throwing_Sickle_5
   m_EditorClassIdentifier: 
-  parentID: UCTA
-  ID: UCTA1
-  UpgradeName: "R\xECu n\xE9m"
-  UpgradeDescription: "B\u1EA1n l\xE0 con ch\xE1u ng\u01B0\u1EDDi Vikings."
-  UpgradeImage: {fileID: 8970661042605636276, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
-  UpgradeLevel: 1
-  previousLevel: {fileID: 0}
+  parentID: UCTS
+  ID: UCTS5
+  UpgradeName: "Li\u1EC1m th\xE9p."
+  UpgradeDescription: "Gi\u1EA3m h\u1ED3i chi\xEAu 25%."
+  UpgradeImage: {fileID: -1137795517, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
+  UpgradeLevel: 5
+  previousLevel: {fileID: 11400000, guid: 9f960cc7d1947894da00da6ebad53ff9, type: 2}
   upgradeCardType: 1
   targetStat: 0
   statValue: 0
@@ -26,5 +26,5 @@ MonoBehaviour:
   summonType: 0
   spiritType: 0
   SummonPrefab: {fileID: 0}
-  extraWeaponType: 1
-  ExtraWeaponPrefab: {fileID: 1133221319524098398, guid: fb15c8e06fe370749952e417a4b15981, type: 3}
+  extraWeaponType: 2
+  ExtraWeaponPrefab: {fileID: 1133221319524098398, guid: 24af19c9fa5dcce4c800b1a64620cf39, type: 3}

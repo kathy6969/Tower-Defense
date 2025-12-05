@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6430554062521226695}
   - component: {fileID: 5083592641196034987}
   m_Layer: 0
-  m_Name: Stealaxe
+  m_Name: StealHammer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81,7 +81,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 8970661042605636276, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
+  m_Sprite: {fileID: 1522957797, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

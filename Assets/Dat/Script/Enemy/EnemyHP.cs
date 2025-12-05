@@ -68,7 +68,7 @@ public class EnemyHP : MonoBehaviour
         //Destroy(gameObject);
         if (childActivator != null)
         {
-            childActivator.EnableRandomChildren(1, 2);
+            childActivator.EnableRandomChildren(2, 5);
             HealFull();
         }
     }

@@ -10,15 +10,15 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
-  m_Name: Upgrade_Card_Throwing_Axe_2
+  m_Name: Upgrade_Card_Throwing_Hammer_3
   m_EditorClassIdentifier: 
-  parentID: UCTA
-  ID: UCTA2
-  UpgradeName: "R\xECu n\xE9m"
-  UpgradeDescription: "Gi\u1EA3m th\u1EDDi gian h\u1ED3i chi\xEAu 10%."
-  UpgradeImage: {fileID: 8970661042605636276, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
-  UpgradeLevel: 2
-  previousLevel: {fileID: 11400000, guid: c86b0ed39a71b8640ba0c355827caa76, type: 2}
+  parentID: UCTH
+  ID: UCTH3
+  UpgradeName: "B\xFAa th\xE9p."
+  UpgradeDescription: "Gi\u1EA3m th\u1EDDi gian h\u1ED3i chi\xEAu 15%."
+  UpgradeImage: {fileID: 1522957797, guid: a578730f8c5cb1240be28d83af95ad50, type: 3}
+  UpgradeLevel: 3
+  previousLevel: {fileID: 11400000, guid: 08c05d86c40cbf04a8dcb787607cdb36, type: 2}
   upgradeCardType: 1
   targetStat: 0
   statValue: 0

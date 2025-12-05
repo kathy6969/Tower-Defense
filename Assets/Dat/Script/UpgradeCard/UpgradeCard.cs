@@ -55,5 +55,6 @@ public enum SummonType
 public enum ExtraWeaponType
 {
     MinecraftTNT,
-    ThrowingAxes
+    ThrowingAxes,
+    ThrowingSickle
 }

@@ -1,9 +1,9 @@
 using UnityEngine;
 public class UpgradeApplier : MonoBehaviour
 {
-    [HideInInspector]public UpgradeCard upgradeCard;
-    [HideInInspector]public GameObject Tower;
-    [HideInInspector]public TowerShooter towerShooter;
+    [HideInInspector] public UpgradeCard upgradeCard;
+    [HideInInspector] public GameObject Tower;
+    [HideInInspector] public TowerShooter towerShooter;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     public void ApplyUpgrade(UpgradeCard Card, GameObject tower)
     {
@@ -178,7 +178,8 @@ public class UpgradeApplier : MonoBehaviour
                 if (upgradeCard.UpgradeLevel == 1)
                 {
                     SummonMinecraftTNT(card, tower);
-                }else if (upgradeCard.UpgradeLevel == 2)
+                }
+                else if (upgradeCard.UpgradeLevel == 2)
                 {
                     // Giảm thời gian coldDown ném TNT
                     MinecraftTNT minecraftTNT = tower.GetComponentInChildren<MinecraftTNT>();
@@ -219,7 +220,8 @@ public class UpgradeApplier : MonoBehaviour
                 if (upgradeCard.UpgradeLevel == 1)
                 {
                     SummonThrowingAxes(card, tower);
-                }else if (upgradeCard.UpgradeLevel == 2)
+                }
+                else if (upgradeCard.UpgradeLevel == 2)
                 {
                     StealAxes stealAxes = tower.GetComponentInChildren<StealAxes>();
                     if (stealAxes != null)
@@ -252,6 +254,44 @@ public class UpgradeApplier : MonoBehaviour
                     }
                 }
                 break;
+            case ExtraWeaponType.ThrowingSickle:
+                if (upgradeCard.UpgradeLevel == 1)
+                {
+                    SummonThrowingSickle(card, tower);
+                }
+                else if (upgradeCard.UpgradeLevel == 2)
+                {
+                    StealAxes throwingSickle = tower.GetComponentInChildren<StealAxes>();
+                    if (throwingSickle != null)
+                    {
+                        throwingSickle.throwCooldown *= 0.9f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 3)
+                {
+                    StealAxes throwingSickle = tower.GetComponentInChildren<StealAxes>();
+                    if (throwingSickle != null)
+                    {
+                        throwingSickle.throwCooldown *= 0.85f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 4)
+                {
+                    StealAxes throwingSickle = tower.GetComponentInChildren<StealAxes>();
+                    if (throwingSickle != null)
+                    {
+                        throwingSickle.throwCooldown *= 0.8f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 5)
+                {
+                    StealAxes throwingSickle = tower.GetComponentInChildren<StealAxes>();
+                    if (throwingSickle != null)
+                    {
+                        throwingSickle.throwCooldown *= 0.75f;
+                    }
+                }
+                break;
             default:
                 Debug.LogWarning("Loại vũ khí phụ không xác định!");
                 break;
@@ -273,20 +313,26 @@ public class UpgradeApplier : MonoBehaviour
     private void SummonElectricOrb(UpgradeCard card, GameObject tower)
     {
         GameObject electricOrb = Instantiate(card.SummonPrefab, tower.transform.position, Quaternion.identity, tower.transform);
-        transform.parent = tower.transform;
+        electricOrb.transform.parent = tower.transform;
         Debug.Log("Electric Orb được sinh ra tại: " + electricOrb.name);
     }
     private void SummonMinecraftTNT(UpgradeCard card, GameObject tower)
     {
         GameObject minecraftTNT = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
-        transform.parent = tower.transform;
+        minecraftTNT.transform.parent = tower.transform;
         Debug.Log("Minecraft TNT được sinh ra tại: " + minecraftTNT.name);
     }
     private void SummonThrowingAxes(UpgradeCard card, GameObject tower)
     {
         GameObject throwingAxes = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
-        transform.parent = tower.transform;
+        throwingAxes.transform.parent = tower.transform;
         Debug.Log("Throwing Axes được sinh ra tại: " + throwingAxes.name);
+    }
+    private void SummonThrowingSickle(UpgradeCard card, GameObject tower)
+    {
+        GameObject throwingSickle = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
+        throwingSickle.transform.parent = tower.transform;
+        Debug.Log("Throwing Sickle được sinh ra tại: " + throwingSickle.name);
     }
     public void Setup(UpgradeCard card, GameObject tower)
     {
