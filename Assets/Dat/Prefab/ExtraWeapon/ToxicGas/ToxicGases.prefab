@@ -1,0 +1,59 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1607283993525096611
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2809792436990371469}
+  - component: {fileID: 4902298688852774789}
+  m_Layer: 0
+  m_Name: ToxicGases
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2809792436990371469
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607283993525096611}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4902298688852774789
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1607283993525096611}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a9f1693292354074b94adfe5e0ca1441, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  toxicGasPrefabs:
+  - {fileID: 2196303887635539500, guid: c65cf21fe641d264491ae5d4e5147e35, type: 3}
+  - {fileID: 2624618017163915616, guid: 2f0111e8bdd2d7a42afc46ff21585a36, type: 3}
+  - {fileID: 1728809173294843992, guid: 28cffbc054159c84d9e07896da4b3ff2, type: 3}
+  poolSize: 20
+  lifeTime: 2.5
+  emissionRate: 4
+  emissionInterval: 1.25
+  emissionTimer: 0
+  startSpeed: 7
+  deceleration: 0.96
+  startScale: 0.25
+  endScale: 1.5

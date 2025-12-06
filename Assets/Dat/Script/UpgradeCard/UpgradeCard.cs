@@ -56,5 +56,6 @@ public enum ExtraWeaponType
 {
     MinecraftTNT,
     ThrowingAxes,
-    ThrowingSickle
+    ThrowingSickle,
+    ToxicGases
 }

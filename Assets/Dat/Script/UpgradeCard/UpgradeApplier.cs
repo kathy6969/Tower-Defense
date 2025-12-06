@@ -292,6 +292,46 @@ public class UpgradeApplier : MonoBehaviour
                     }
                 }
                 break;
+            case ExtraWeaponType.ToxicGases:
+                if (upgradeCard.UpgradeLevel == 1)
+                {
+                    SummonToxicGases(card, tower);
+                }
+                else if (upgradeCard.UpgradeLevel == 2)
+                {
+                    ToxicGases toxicGases = tower.GetComponentInChildren<ToxicGases>();
+                    if (toxicGases != null)
+                    {
+                        toxicGases.emissionRate += 2f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 3)
+                {
+                    ToxicGases toxicGases = tower.GetComponentInChildren<ToxicGases>();
+                    if (toxicGases != null)
+                    {
+                        toxicGases.startSpeed += 3f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 4)
+                {
+                    ToxicGases toxicGases = tower.GetComponentInChildren<ToxicGases>();
+                    if (toxicGases != null)
+                    {
+                        toxicGases.lifeTime += 1.5f;
+                    }
+                }
+                else if (upgradeCard.UpgradeLevel == 5)
+                {
+                    ToxicGases toxicGases = tower.GetComponentInChildren<ToxicGases>();
+                    if (toxicGases != null)
+                    {
+                        toxicGases.emissionRate += 3f;
+                        toxicGases.startSpeed += 4f;
+                        toxicGases.lifeTime += 2f;
+                    }
+                }
+                break;
             default:
                 Debug.LogWarning("Loại vũ khí phụ không xác định!");
                 break;
@@ -333,6 +373,12 @@ public class UpgradeApplier : MonoBehaviour
         GameObject throwingSickle = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
         throwingSickle.transform.parent = tower.transform;
         Debug.Log("Throwing Sickle được sinh ra tại: " + throwingSickle.name);
+    }
+    private void SummonToxicGases(UpgradeCard card, GameObject tower)
+    {
+        GameObject toxicGases = Instantiate(card.ExtraWeaponPrefab, tower.transform.position, Quaternion.identity, tower.transform);
+        toxicGases.transform.parent = tower.transform;
+        Debug.Log("Toxic Gases được sinh ra tại: " + toxicGases.name);
     }
     public void Setup(UpgradeCard card, GameObject tower)
     {
