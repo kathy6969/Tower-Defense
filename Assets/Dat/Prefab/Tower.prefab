@@ -233,12 +233,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 0
-  InvincibilityTime: 0.25
+  invincibilityTime: 0.25
   healRegenRate: 1
   healAmount: 1
   regenDelay: 3
   armor: 0
-  damageReductionPerArmor: 0
+  damageReduction: 0
 --- !u!114 &3803637745807808644
 MonoBehaviour:
   m_ObjectHideFlags: 0

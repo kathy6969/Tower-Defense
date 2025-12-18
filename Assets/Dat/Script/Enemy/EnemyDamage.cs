@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyDamage : MonoBehaviour
 {
+    public int damageAmount = 10;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -20,7 +21,7 @@ public class EnemyDamage : MonoBehaviour
             TowerHP towerHP = collision.gameObject.GetComponent<TowerHP>();
             if (towerHP != null)
             {
-                towerHP.TakeDamage(10); // Deal 10 damage to the tower
+                towerHP.TakeDamage(damageAmount); // Deal damageAmount damage to the tower
             }
         }
     }

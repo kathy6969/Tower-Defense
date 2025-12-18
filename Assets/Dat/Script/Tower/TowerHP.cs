@@ -12,56 +12,64 @@ public class TowerHP : MonoBehaviour
     public int healAmount = 1;
     public float regenDelay = 3f;
 
-    public int armor = 0;
-    public int damageReductionPerArmor = 0;
+    public int armor;
+    public int damageReduction = 5;
 
     private bool isInvincible = false;
     private float lastDamageTime;
+    private float nextHealTime;
+    private Coroutine healCoroutine;
+    private Coroutine invincibilityCoroutine;
 
     void Start()
     {
         currentHP = maxHP;
         lastDamageTime = Time.time;
+        nextHealTime = Time.time + regenDelay;
+        
+        healCoroutine = StartCoroutine(HealLoop());
+    }
 
-        StartCoroutine(HealLoop());
+    void OnDisable()
+    {
+        if (healCoroutine != null)
+            StopCoroutine(healCoroutine);
+        if (invincibilityCoroutine != null)
+            StopCoroutine(invincibilityCoroutine);
     }
 
     public void TakeDamage(int damage)
     {
         if (isInvincible) return;
-
-        int effectiveDamage = damage * (1-((armor*damageReductionPerArmor)/100));
-        if (effectiveDamage < 0) effectiveDamage = 0;
-
-        currentHP -= effectiveDamage;
+        
+        int finalDamage = Mathf.RoundToInt(damage - armor / 2f);
+        int finalDamageA = finalDamage * (100 - damageReduction) / 100;
+        currentHP -= finalDamageA;
         lastDamageTime = Time.time;
-
-        Debug.Log($"Tower took {effectiveDamage} damage. HP: {currentHP}");
-
+        nextHealTime = lastDamageTime + regenDelay;
         if (currentHP <= 0)
         {
             Die();
             return;
         }
 
-        StartCoroutine(InvincibilityCoroutine());
+        if (invincibilityCoroutine != null)
+            StopCoroutine(invincibilityCoroutine);
+        invincibilityCoroutine = StartCoroutine(InvincibilityCoroutine());
     }
 
     private IEnumerator HealLoop()
     {
+        var waitTime = new WaitForSeconds(healRegenRate);
+        
         while (true)
         {
-            // ⏱ chờ đủ regen delay kể từ lần bị đánh gần nhất
-            if (Time.time - lastDamageTime >= regenDelay &&
-                currentHP < maxHP)
+            if (Time.time >= nextHealTime && currentHP < maxHP)
             {
                 currentHP += healAmount;
                 currentHP = Mathf.Min(currentHP, maxHP);
-
-                Debug.Log("Tower healed. HP: " + currentHP);
             }
-
-            yield return new WaitForSeconds(healRegenRate);
+            yield return waitTime;
         }
     }
 
@@ -75,8 +83,6 @@ public class TowerHP : MonoBehaviour
     public void IncreaseMaxHP(int amount)
     {
         maxHP += amount;
-        // không reset regen delay
-        Debug.Log("Max HP increased to " + maxHP);
     }
 
     public void HealInstant(int amount)

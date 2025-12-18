@@ -90,8 +90,8 @@ public class UpgradeApplier : MonoBehaviour
                 break;
             case TowerStatType.DamageReductionPerArmor:
                 // Nâng cấp giảm sát thương mỗi điểm giáp
-                towerHP.damageReductionPerArmor = (int)(card.isMultiplier ? towerHP.damageReductionPerArmor * card.statValue :
-                    towerHP.damageReductionPerArmor + card.statValue);
+                towerHP.damageReduction = (int)(card.isMultiplier ? towerHP.damageReduction * card.statValue :
+                    towerHP.damageReduction + card.statValue);
                 break;
             default:
                 Debug.LogWarning("Thuộc tính tháp không xác định!");
