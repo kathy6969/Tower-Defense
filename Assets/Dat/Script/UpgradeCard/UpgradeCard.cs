@@ -42,9 +42,16 @@ public enum UpgradeCardType
 
 public enum TowerStatType
 {
-    Range,
-    FireRate,
-    MaxTargets
+    Range,// done
+    FireRate,//done
+    MaxTargets,//done
+    Damage,//done
+    MaxHP,//done
+    Armor,//done
+    HealAmount,//done
+    RegenDelay,//done
+    InvincibilityTime,
+    DamageReductionPerArmor//done
 }
 public enum SummonType
 {

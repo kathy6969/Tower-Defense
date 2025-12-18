@@ -31,7 +31,13 @@ public class UpgradeApplier : MonoBehaviour
         TowerShooter towerShooter = tower.GetComponent<TowerShooter>();
         if (towerShooter == null)
         {
-            UnityEngine.Debug.LogWarning("Tower không có component TowerShooter!");
+            Debug.LogWarning("Tower không có component TowerShooter!");
+            return;
+        }
+        TowerHP towerHP = tower.GetComponent<TowerHP>();
+        if (towerHP == null)
+        {
+            Debug.LogWarning("Tower không có component TowerHP!");
             return;
         }
         // Thực hiện nâng cấp thuộc tính tháp dựa trên card.targetStat và card.statValue
@@ -51,6 +57,41 @@ public class UpgradeApplier : MonoBehaviour
                 // Nâng cấp số mục tiêu tối đa
                 towerShooter.maxTargets = (int)(card.isMultiplier ? towerShooter.maxTargets * card.statValue :
                     towerShooter.maxTargets + card.statValue);
+                break;
+            case TowerStatType.Damage:
+                // Nâng cấp sát thương
+                towerShooter.damage = (int)(card.isMultiplier ? towerShooter.damage * card.statValue :
+                    towerShooter.damage + card.statValue);
+                break;
+            case TowerStatType.MaxHP:
+                // Nâng cấp máu tối đa
+                towerHP.maxHP = (int)(card.isMultiplier ? towerHP.maxHP * card.statValue :
+                    towerHP.maxHP + card.statValue);
+                break;
+            case TowerStatType.Armor:
+                // Nâng cấp giáp
+                towerHP.armor = (int)(card.isMultiplier ? towerHP.armor * card.statValue :
+                    towerHP.armor + card.statValue);
+                break;
+            case TowerStatType.HealAmount:
+                // Nâng cấp lượng hồi máu
+                towerHP.healAmount = (int)(card.isMultiplier ? towerHP.healAmount * card.statValue :
+                    towerHP.healAmount + card.statValue);
+                break;
+            case TowerStatType.RegenDelay:
+                // Nâng cấp thời gian hồi máu
+                towerHP.regenDelay = (int)(card.isMultiplier ? towerHP.regenDelay * card.statValue :
+                    towerHP.regenDelay - card.statValue);
+                break;
+            case TowerStatType.InvincibilityTime:
+                // Nâng cấp thời gian bất tử
+                towerHP.invincibilityTime = card.isMultiplier ? towerHP.invincibilityTime * card.statValue :
+                    towerHP.invincibilityTime + card.statValue;
+                break;
+            case TowerStatType.DamageReductionPerArmor:
+                // Nâng cấp giảm sát thương mỗi điểm giáp
+                towerHP.damageReductionPerArmor = (int)(card.isMultiplier ? towerHP.damageReductionPerArmor * card.statValue :
+                    towerHP.damageReductionPerArmor + card.statValue);
                 break;
             default:
                 Debug.LogWarning("Thuộc tính tháp không xác định!");

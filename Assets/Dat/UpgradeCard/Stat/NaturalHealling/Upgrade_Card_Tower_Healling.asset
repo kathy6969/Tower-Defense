@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Card_Tower_Healling
+  m_EditorClassIdentifier: 
+  parentID: UCTHL
+  ID: UCTHL1
+  UpgradeName: "Tinh th\u1EC3 H\u1ED3ng ng\u1ECDc."
+  UpgradeDescription: "+1 H\u1ED3i m\xE1u t\u1EF1 nhi\xEAn."
+  UpgradeImage: {fileID: 0}
+  UpgradeLevel: 1
+  previousLevel: {fileID: 0}
+  upgradeCardType: 0
+  targetStat: 6
+  statValue: 1
+  isMultiplier: 0
+  summonType: 0
+  spiritType: 0
+  SummonPrefab: {fileID: 0}
+  extraWeaponType: 0
+  ExtraWeaponPrefab: {fileID: 0}

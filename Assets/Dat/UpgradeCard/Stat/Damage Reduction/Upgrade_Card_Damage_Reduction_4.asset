@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Card_Damage_Reduction_4
+  m_EditorClassIdentifier: 
+  parentID: UCDR
+  ID: UCDR4
+  UpgradeName: "T\u01B0\u1EDDng Th\u1EA1ch anh gia c\u1ED1."
+  UpgradeDescription: "T\u0103ng 1% kh\xE1ng s\xE1t th\u01B0\u01A1ng."
+  UpgradeImage: {fileID: 0}
+  UpgradeLevel: 4
+  previousLevel: {fileID: 11400000, guid: 185d4c42979968c4b84d7d45c9df1f2c, type: 2}
+  upgradeCardType: 0
+  targetStat: 9
+  statValue: 1
+  isMultiplier: 0
+  summonType: 0
+  spiritType: 0
+  SummonPrefab: {fileID: 0}
+  extraWeaponType: 0
+  ExtraWeaponPrefab: {fileID: 0}

@@ -7,6 +7,7 @@ public class TowerShooter : MonoBehaviour
     public float range = 5f;// Phạm vi tấn công
     public float fireRate = 1f;// Tốc độ bắn (số phát mỗi giây)
     public int maxTargets = 3;// Số lượng kẻ thù tối đa có thể tấn công cùng lúc
+    public int damage = 10;// Sát thương mỗi viên đạn
 
     [Header("References")]
     public GameObject bulletPrefab;
@@ -68,6 +69,9 @@ public class TowerShooter : MonoBehaviour
             // Bắn viên đạn chính
             GameObject bulletGO = Instantiate(bulletPrefab, firePoint.position, firePoint.rotation);
             Bullet bullet = bulletGO.GetComponent<Bullet>();
+            TPDamage damage = bulletGO.GetComponent<TPDamage>();
+            if (damage != null)
+                damage.damageAmount = this.damage;
             if (bullet != null)
                 bullet.Launch(target);
         }

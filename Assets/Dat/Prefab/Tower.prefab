@@ -214,6 +214,7 @@ MonoBehaviour:
   range: 10
   fireRate: 1
   maxTargets: 1
+  damage: 10
   bulletPrefab: {fileID: 5087247711384696631, guid: 83e8925f72ac52c43a62b023b08a7340, type: 3}
   firePoint: {fileID: 3795442827494407975}
   MinionSlot: {fileID: 5081717101333533239}
@@ -232,7 +233,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   maxHP: 100
   currentHP: 0
-  InvincibilityTime: 0.17
+  InvincibilityTime: 0.25
+  healRegenRate: 1
+  healAmount: 1
+  regenDelay: 3
+  armor: 0
+  damageReductionPerArmor: 0
 --- !u!114 &3803637745807808644
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -264,6 +270,10 @@ PrefabInstance:
     - target: {fileID: 556152604036220239, guid: 68212d795fd3f094180e311388e56076, type: 3}
       propertyPath: m_Name
       value: SpiritsSlot
+      objectReference: {fileID: 0}
+    - target: {fileID: 3904773268390729041, guid: 68212d795fd3f094180e311388e56076, type: 3}
+      propertyPath: orbitRadius
+      value: 1.5
       objectReference: {fileID: 0}
     - target: {fileID: 7015914902379434988, guid: 68212d795fd3f094180e311388e56076, type: 3}
       propertyPath: m_LocalPosition.x

@@ -1,0 +1,30 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ab4d9c27ab410af4b9f6f2fa31e19326, type: 3}
+  m_Name: Upgrade_Card_Tower_Damage_3
+  m_EditorClassIdentifier: 
+  parentID: UCTD
+  ID: UCTD3
+  UpgradeName: "T\u0103ng s\xE1t th\u01B0\u01A1ng."
+  UpgradeDescription: "T\u0103ng 20% s\xE1t th\u01B0\u01A1ng"
+  UpgradeImage: {fileID: 0}
+  UpgradeLevel: 3
+  previousLevel: {fileID: 11400000, guid: 50e9bbb0d77348149a2eab3b51d6f2cf, type: 2}
+  upgradeCardType: 0
+  targetStat: 3
+  statValue: 1.2
+  isMultiplier: 1
+  summonType: 0
+  spiritType: 0
+  SummonPrefab: {fileID: 0}
+  extraWeaponType: 0
+  ExtraWeaponPrefab: {fileID: 0}
