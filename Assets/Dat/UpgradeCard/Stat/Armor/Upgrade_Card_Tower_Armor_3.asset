@@ -15,13 +15,13 @@ MonoBehaviour:
   parentID: UCTAr
   ID: UCTAr3
   UpgradeName: "T\u01B0\u1EDDng th\u1EA1ch anh."
-  UpgradeDescription: "T\u0103ng 3 gi\xE1p cho th\xE1p."
+  UpgradeDescription: "T\u0103ng 6 gi\xE1p cho th\xE1p."
   UpgradeImage: {fileID: 0}
   UpgradeLevel: 3
   previousLevel: {fileID: 11400000, guid: 7aed03bd8fda99643a5e4238f9a110f6, type: 2}
   upgradeCardType: 0
   targetStat: 5
-  statValue: 3
+  statValue: 6
   isMultiplier: 0
   summonType: 0
   spiritType: 0
