@@ -472,7 +472,21 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Trees_Alt_Outlined_0: 1999421632825555118
+      Trees_Alt_Outlined_1: -3249585756311184976
+      Trees_Alt_Outlined_10: -2514257692254943533
+      Trees_Alt_Outlined_11: -6125298310391571063
+      Trees_Alt_Outlined_12: -7782680509758731068
+      Trees_Alt_Outlined_13: 1887803113273140010
+      Trees_Alt_Outlined_2: -373952620797161960
+      Trees_Alt_Outlined_3: 8849684810390087524
+      Trees_Alt_Outlined_4: -5101171343899702587
+      Trees_Alt_Outlined_5: -2345948487531226602
+      Trees_Alt_Outlined_6: 1627331930768546437
+      Trees_Alt_Outlined_7: -961776634688434971
+      Trees_Alt_Outlined_8: -168719413107316343
+      Trees_Alt_Outlined_9: 1166895588334027457
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
